@@ -3,23 +3,24 @@ body {
     padding: 0;
 }
 
-nav {
-    display: inline-flex;
-    gap: 30px;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    background-color: rgba(25, 25, 25, 1);
+    color: white;
 }
 
-#pfp {
-    width: 300px;
-    border-radius: 300px;
+li {
+    text-decoration: none;
 }
 
-#background-img {
-    width: 100%;
-    height: 100%;
-    filter: blur(3px);
-    z-index: -1;
-    opacity: .6;
-    position: absolute;
-    top: 0;
-    object-fit: cover;
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 25px;
 }
