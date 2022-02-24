@@ -1,25 +1,29 @@
+/* Montserrat font - weights: 300 500 600 700 800 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    font-family: Montserrat, Roboto, Arial;
 }
 
 header {
-    display: grid;
-    justify-content: space-around;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px 4%;
+    padding: 7px 4%;
     background-color: rgba(25, 25, 25, 1);
     color: white;
+    font-weight: 700;
 }
 
 #logo {
-    max-width: 50px;
-    max-width: 280px;
-    flex-basis: 33%;
+    width: 280px;
+    cursor: pointer;
 }
 
 .nav-links {
-    flex-basis: 33%;
     list-style: none;
 }
 
@@ -27,9 +31,17 @@ header {
     display: inline-block;
     font-size: 1.2rem;
     padding: 0 20px;
+    cursor: pointer;
 }
 
 #contact {
-    max-width: 100px;
-    flex-basis: 33%;
+    width: 130px;
+    height: 40px;
+    margin: 0 75px;
+    background-color: #5BD9AA;
+    border: none;
+    border-radius: 10px;
+    font-family: Montserrat, Roboto, Arial;
+    font-weight: 700;
+    cursor: pointer;
 }
