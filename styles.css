@@ -51,6 +51,7 @@ a {
 }
 
 .nav-links {
+    display: block;
     list-style: none;
 }
 
@@ -179,5 +180,13 @@ footer {
 @media screen and (min-aspect-ratio: 1/1) {
     .hamburger {
         display: none;
+    }
+
+    .nav-links {
+        display: block !important;
+    }
+
+    #contact{
+        display: block !important;
     }
 }
