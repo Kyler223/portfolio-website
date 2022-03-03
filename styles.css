@@ -7,7 +7,7 @@ body {
     font-family: Montserrat, Roboto, Arial;
 }
 
-header {
+/* header {
     display: flex;
     position: sticky;
     justify-content: space-between;
@@ -16,11 +16,22 @@ header {
     background-color: rgba(25, 25, 25, 1);
     color: white;
     font-weight: 700;
+} */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10%;
+    background-color: rgba(25, 25, 25, 1);
+    color: white;
+    font-weight: 700;
 }
 
 #logo {
-    width: 280px;
+    max-width: 280px;
     cursor: pointer;
+    margin: auto 0;
 }
 
 #logo:hover {
@@ -60,6 +71,17 @@ a {
     font-size: 1.2rem;
     padding: 0 25px;
     cursor: pointer;
+}
+
+.hamburger {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger:focus {
+    outline: none;
 }
 
 .border-right {
@@ -136,4 +158,26 @@ footer {
 
 .highlight-blue {
     color: #61BACD;
+}
+
+/* phones */
+@media screen and (max-aspect-ratio: 1/1) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: inherit;
+    }
+
+    #contact{
+        display: none;
+    }
+}
+
+/* desktop */
+@media screen and (min-aspect-ratio: 1/1) {
+    .hamburger {
+        display: none;
+    }
 }
