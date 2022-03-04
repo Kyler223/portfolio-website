@@ -20,6 +20,7 @@ body {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 7px 10%;
@@ -30,6 +31,8 @@ nav {
 
 #logo {
     max-width: 280px;
+    display: inline-block;
+    padding: 5px;
     cursor: pointer;
     margin: auto 0;
 }
@@ -103,6 +106,10 @@ a {
     transition: 50ms ease-out;
 }
 
+#contactDropdown {
+    display: none;
+}
+
 #contact:hover{
     opacity: .9;
 }
@@ -162,22 +169,55 @@ footer {
 }
 
 /* phones */
-@media screen and (max-aspect-ratio: 1/1) {
+@media screen and (max-width: 1450px){
+    html {
+        font-size: 20px;
+    }
+
     .nav-links {
         display: none;
     }
 
+    .navLinksDropdown {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .navItemDropdown {      
+        border: none;
+        line-height: 60px;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
     .hamburger {
         display: inherit;
     }
 
-    #contact{
+    #contact {
         display: none;
+    }
+
+    #contactDropdown {
+        display: inherit;
+        background-color: rgba(95, 227, 216, .85);
+
+    }
+
+    #logo {
+        max-width: 380px;
     }
 }
 
 /* desktop */
-@media screen and (min-aspect-ratio: 1/1) {
+@media screen and (min-width: 1450px){
+    html {
+        font-size: 16px;
+    }
+    
     .hamburger {
         display: none;
     }

@@ -1,11 +1,11 @@
-var hamburger = document.getElementById('hamburger');
-
 function hamburgerClick() {
-    var navlinks = document.getElementById('nav-links');  //stating varible does not work outside the fuction
-    if(navlinks.style.display === 'none') {
-        navlinks.style.display = 'block';
-    }
-    else {
-        navlinks.style.display = 'none';
-    }
+    //stating varibles do not work outside the fuction
+    var hamburger = document.getElementById('hamburger');
+    var navlinks = document.getElementById('nav-links');
+    var navItem = document.querySelectorAll('.nav-item');
+    var contactDropdown = document.getElementById('contactDropdown');
+
+    contactDropdown.textContent = 'Contact';
+    navlinks.classList.toggle('navLinksDropdown');
+    navItem.forEach(item => {item.classList.toggle('navItemDropdown')});
 }
