@@ -1,6 +1,5 @@
 function hamburgerClick() {
     //stating varibles do not work outside the fuction
-    var hamburger = document.getElementById('hamburger');
     var navlinks = document.getElementById('nav-links');
     var navItem = document.querySelectorAll('.nav-item');
     var contactDropdown = document.getElementById('contactDropdown');
