@@ -7,6 +7,7 @@ body {
     font-family: Montserrat, Roboto, Arial;
 }
 
+
 /* header {
     display: flex;
     position: sticky;
@@ -119,6 +120,10 @@ a {
     transform: scale(95%);
 }
 
+.underConstruction {
+    text-align: center;
+}
+
 #banner-container {
     display: flex;
     width: 100%;
@@ -144,7 +149,7 @@ footer {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
