@@ -16,21 +16,54 @@ h2 {
     background-color: rgb(0, 0, 0, 0.7);
 }
 
-/* .iframe-cover {
-    z-index: 1000000000;
+.group {
     height: 60vh;
     width: 85%;
+    max-width: 1400px;
+    border-radius: 40px;
+    transition: transform 1.3s ease, border-radius 1.3s ease;
+    margin: 50px auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .6);
+    border-radius: 40px;
+}
+
+.group:hover {
+    border-radius: 0px;
+    transform: scale(102%);
+}
+
+.group:hover .iframe-cover{
+    border-radius: 0px;
+}
+
+.group:hover iframe{
+    border-radius: 0px;
+}
+
+
+.iframe-cover {
+    height: 60vh;
+    width: 85%;
+    max-width: 1400px;
     margin: 0 auto;
+    border: 2px solid rgb(25, 25, 25, 0);
+    background-color: rgb(0, 0, 0, .4);
+    border-radius: 40px;
     position: absolute;
-    color: rgb(0, 0, 0, 0.7);
-    background-color: rgb(0, 0, 0, 0.7);
-} */
+    transition: border-radius 1.3s ease;
+}
+
+.iframe-cover:hover {
+    width: 100%;
+}
 
 iframe {
-    height: 60vh;
-    width: 85%;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
     border: 2px solid rgb(25, 25, 25, 1);
     background-color: rgba(25, 25, 25, 1);
-    border-radius: 35px;
-    margin: 0 auto;
+    border-radius: 40px;
+    transition: border-radius 1.3s ease;
+    /* box-shadow: 0 0 50px rgba(0, 0, 0, .6); */
 }
