@@ -4,9 +4,23 @@ body {
     text-align: center;
 }
 
+/* * {
+    border: 1px solid black;
+} */
+
+section {
+    margin: 100px 0;
+}
+
 h2 {
-    margin: 25px;
+    margin: 25px 15vw;
     font-size: 2.5rem;
+    /* max-width: 800px; */
+}
+
+p {
+    margin: 20px 15vw;
+    /* max-width: 800px; */
 }
 
 .border {
@@ -45,22 +59,22 @@ h2 {
 
 .group:hover .iframe-icon {
     opacity: 100%;
+    top: 45%;
 }
 
 .group:hover iframe{
     border-radius: 0px;
-    /* filter:blur(1px); */
 }
 
 .iframe-icon {
     z-index: 100;
-    top: 45%;
+    top: 50%;
     right: 45%;
     height: 10%;
     filter: brightness(300%);
     position: absolute;
     opacity: 0;
-    transition: opacity 1.3s ease;
+    transition: opacity 1.3s ease, top 1s ease;
     margin: auto;
     color: white;
 }
@@ -84,4 +98,60 @@ iframe {
     background-color: rgba(25, 25, 25, 1);
     border-radius: 45px;
     transition: border-radius 1.3s ease, filter 1.3s ease;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(90px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* phones */
+@media screen and (max-width: 1250px){
+    .group {
+        border-radius: 0px;
+        transform: scale(102%);
+        box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+    }
+
+    .iframe-cover{
+        border-radius: 0px;
+        width: 100%;
+        background-color: rgba(25, 25, 25, .4);
+    }
+    
+    .iframe-icon {
+        opacity: 100%;
+        top: 45%;
+    }
+    
+    iframe{
+        border-radius: 0px;
+    }
+
+    .group :first-child {
+        animation: firstItemPhone 1s ease 100ms;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1250px){
+
+}
+
+/* animations */
+
+@keyframes firstItemPhone {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top: 45%;
+    }
 }
