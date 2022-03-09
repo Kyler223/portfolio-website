@@ -113,7 +113,7 @@ iframe {
 }
 
 /* phones */
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 1100px){
     .group {
         border-radius: 0px;
         transform: scale(102%);
@@ -141,7 +141,7 @@ iframe {
 }
 
 /* desktop */
-@media screen and (min-width: 1250px){
+@media screen and (min-width: 1100px){
 
 }
 
