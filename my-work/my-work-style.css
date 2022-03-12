@@ -93,6 +93,7 @@ p {
 iframe {
     height: 100%;
     width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
     border: 2px solid rgb(25, 25, 25, 1);
     background-color: rgba(25, 25, 25, 1);

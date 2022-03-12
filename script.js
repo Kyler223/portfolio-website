@@ -26,7 +26,7 @@ setInterval(function() {
     var iframe = document.getElementById('bannerIframe');
     if(!hover) {
         iframe.contentWindow.scrollTo(0, height);
-        height += .3;
+        height += scrollAmount;
     }
     else {
         height = iframe.contentWindow.pageYOffset;
