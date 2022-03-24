@@ -230,17 +230,23 @@ footer {
         justify-content: center;
         text-align: center;
         width: 100%;
+        padding: 0;
     }
     
     .navItemDropdown {      
         border: none;
         line-height: 60px;
-        width: 100%;
+        width: 85%;
+        margin: 0 auto;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     .hamburger {
         display: inherit;
+    }
+
+    .hamburger-center {
+        margin: 0 auto;
     }
 
     #contact {
