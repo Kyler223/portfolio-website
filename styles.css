@@ -4,18 +4,6 @@ body {
     font-family: Montserrat, Roboto, Arial;
 }
 
-
-/* header {
-    display: flex;
-    position: sticky;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px 7%;
-    background-color: rgba(25, 25, 25, 1);
-    color: white;
-    font-weight: 700;
-} */
-
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -57,7 +45,6 @@ a {
 }
 
 .nav-links  li:hover {
-    /* padding: 0 26px; */
     transform: scale(101.5%);
     opacity: .9;
     transition: 100ms ease-out;
@@ -178,7 +165,6 @@ iframe {
 }
 
 /* footer */
-
 footer {
     width: 100%;
     height: 300px;
@@ -283,8 +269,9 @@ footer {
 /* fonts */
 @font-face {
     font-family: "Montserrat";
-    src: url("/fonts/montserrat/Montserrat-Regular.otf") format("opentype"),
-         url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype"),
-         url("/fonts/montserrat/Montserrat-Light.otf") format("opentype"),
-         url("/fonts/montserrat/Montserrat-Medium.otf") format("opentype");
+    src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype"),
+    url("/fonts/montserrat/Montserrat-Regular.otf") format("opentype"),
+    url("/fonts/montserrat/Montserrat-Light.otf") format("opentype"),
+    url("/fonts/montserrat/Montserrat-Medium.otf") format("opentype"),
+    url("/fonts/montserrat/Montserrat-ExtraBold.otf") format("opentype");
 }
