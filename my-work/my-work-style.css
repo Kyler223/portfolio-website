@@ -1,6 +1,4 @@
 body {
-    margin: 0;
-    padding: 0;
     text-align: center;
 }
 
@@ -95,18 +93,6 @@ iframe {
     transition: border-radius 1.3s ease, filter 1.3s ease;
 }
 
-.reveal {
-    position: relative;
-    transform: translateY(90px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-  
-.reveal.active {
-    transform: translateY(0);
-    opacity: 1;
-}
-
 /* phones */
 @media screen and (max-width: 1100px){
     .group {
@@ -135,13 +121,12 @@ iframe {
     }
 }
 
-/* desktop */
+/* desktop
 @media screen and (min-width: 1100px){
 
-}
+} */
 
 /* animations */
-
 @keyframes firstItemPhone {
     0% {
         top: 50%;
