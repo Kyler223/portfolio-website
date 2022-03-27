@@ -2,21 +2,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: flex-start;
 }
 
-/* .form-input {
-
-} */
-
-#message-input {
-    height: 300px;
-    /* text-align: top !important; */
+input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
-.label-input {
+#send {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: black;
+    background-color: var(--blue-accent);
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Montserrat-Medium', Roboto, Arial;
+    font-weight: 100;
 }
 
-.flex-break {
-    flex-basis: 100%;
+#send-icon {
+    height: 1rem;
+    margin: auto;
 }

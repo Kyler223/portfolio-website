@@ -35,19 +35,21 @@
     <main>
         <h1 class="text-align-center">Contact</h1>
         <form class="email-message">
-            <div class="label-input">
+            <div>
                 <label for="email-input">Email:</label>
                 <div class="flex-break"></div>
                 <input id="email-input" size="30" type="email" placeholder="your-email@email.com">
             </div>
             <div class="flex-break"></div>
-            <div class="label-input">
+            <div>
                 <label for="message-input">Message:</label>
                 <div class="flex-break"></div>
-                <input id="message-input" size="100" type="text" placeholder="Your message">
+                <textarea name="message-input" id="message-input" cols="50" rows="8" placeholder="Your message"></textarea>
             </div>
             <div class="flex-break"></div>
-            <button>Send</button>
+            <button id="send">Send
+                <img id="send-icon" src="/images/paper-plane-top.svg">
+            </button>
         </form>
     </main>
     <footer class="absolute-footer">
