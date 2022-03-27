@@ -1,0 +1,22 @@
+.email-message {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+/* .form-input {
+
+} */
+
+#message-input {
+    height: 300px;
+    /* text-align: top !important; */
+}
+
+.label-input {
+}
+
+.flex-break {
+    flex-basis: 100%;
+}
