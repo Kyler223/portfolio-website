@@ -1,26 +1,55 @@
+:root {
+    --contact-padding: 12px;
+    --contact-border-radius: 5px;
+}
+
+/* .msg-div {
+    width: 60vw;
+    border: 1px solid red;
+} */
+
 .email-message {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+label {
+    /* margin-top: 40px; */
+    line-height: 40px;
+    font-size: 1.6rem;
+    padding: var(--contact-padding);
+}
+
 input {
     border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    border-radius: var(--contact-border-radius);
+}
+
+textarea {
+    height: 45vh;
+    width: 60vw;
+    max-width: 1000px;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    padding: var(--contact-padding);
+    font-size: 1.3rem;
 }
 
 #send {
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: var(--contact-border-radius);
     color: black;
     background-color: var(--blue-accent);
-    padding: 10px;
-    font-size: 1rem;
+    padding: 12px;
+    font-size: 1.3rem;
     font-family: 'Montserrat-Medium', Roboto, Arial;
     font-weight: 100;
 }
 
 #send-icon {
-    height: 1rem;
+    height: 1.3rem;
     margin: auto;
 }

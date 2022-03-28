@@ -15,6 +15,7 @@
     <link rel="manifest" href="/favicon/site.webmanifest">
     <!-- javascript -->
     <script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="contact-script.js"></script>
 </head>
 <body>
     <header>    
@@ -35,18 +36,18 @@
     <main>
         <h1 class="text-align-center">Contact</h1>
         <form class="email-message">
+            <div class="flex-break"></div>
+            <div class="msg-div">
+                <label for="message-input">Message:</label>
+                <div class="flex-break"></div>
+                <textarea name="message-input" id="message-input" cols="50" rows="8" placeholder="Your message here."></textarea>
+            </div>
+            <div class="flex-break"></div>
             <div>
                 <label for="email-input">Email:</label>
                 <div class="flex-break"></div>
                 <input id="email-input" size="30" type="email" placeholder="your-email@email.com">
             </div>
-            <div class="flex-break"></div>
-            <div>
-                <label for="message-input">Message:</label>
-                <div class="flex-break"></div>
-                <textarea name="message-input" id="message-input" cols="50" rows="8" placeholder="Your message"></textarea>
-            </div>
-            <div class="flex-break"></div>
             <button id="send">Send
                 <img id="send-icon" src="/images/paper-plane-top.svg">
             </button>
