@@ -12,6 +12,7 @@ var typing = setInterval(function () {
         increment++;
     }
     else {
+        //when done with the defaultMsg string run this
         if(afterMsgIncrement === 0 || afterMsgIncrement === 1) {
             //this string may look wrong but this is the only way to go to the next line
             buildingStr = `${buildingStr}
@@ -23,4 +24,8 @@ var typing = setInterval(function () {
             clearInterval(typing);
         }
     }
-}, 120)
+}, 115);
+
+function formSubmit() {
+    window.location.href = 'https://kylernelson.dev/';
+}

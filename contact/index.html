@@ -35,25 +35,25 @@
     </header>
     <main>
         <h1 class="text-align-center">Contact</h1>
-        <form class="email-message">
+        <form class="email-message" method="post" onsubmit="formSubmit()" action="https://formsubmit.co/f9485bda7b05d7db1f55915b438834dc">
             <div class="flex-break"></div>
             <div class="msg-div">
                 <label for="message-input">Message:</label>
                 <div class="flex-break"></div>
-                <textarea name="message-input" id="message-input" cols="50" rows="8" placeholder="Your message here."></textarea>
+                <textarea name="message-input" id="message-input" maxlength="1100" cols="50" rows="8" required></textarea>
             </div>
             <div class="flex-break"></div>
             <div>
                 <label for="email-input">Email:</label>
                 <div class="flex-break"></div>
-                <input id="email-input" size="30" type="email" placeholder="your-email@email.com">
+                <input id="email-input" name="email"size="30" type="email" maxlength="100" placeholder="your-email@email.com" required>
+                <button type="submit" id="send">Send
+                    <img id="send-icon" src="/images/paper-plane-top.svg">
+                </button>
             </div>
-            <button id="send">Send
-                <img id="send-icon" src="/images/paper-plane-top.svg">
-            </button>
         </form>
     </main>
-    <footer class="absolute-footer">
+    <footer>
         <div class="footer-container">
             <h4 class="footer-header">Social Media</h4>
             <a href="https://github.com/Kyler223" target="_blank">

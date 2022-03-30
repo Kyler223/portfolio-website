@@ -36,6 +36,13 @@ textarea {
 input, textarea {
     padding: var(--contact-padding);
     font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+#email-input {
+    max-width: 500px;
+    width: 40vw;
+    min-width: 150px;
 }
 
 #send {
@@ -43,13 +50,18 @@ input, textarea {
     border-radius: var(--contact-border-radius);
     color: black;
     background-color: var(--blue-accent);
-    padding: 12px;
+    padding: 11px;
     font-size: 1.3rem;
     font-family: 'Montserrat-Medium', Roboto, Arial;
     font-weight: 100;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 #send-icon {
-    height: 1.3rem;
-    margin: auto;
+    height: 1.1rem;
+    vertical-align: middle;
+    padding-left: 2px;
+    padding-bottom: 5px;
 }
