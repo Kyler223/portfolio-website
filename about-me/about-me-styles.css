@@ -1,3 +1,11 @@
+.img-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin: 50px 5vw;
+}
+
 #profile-pic {
     min-width: 200px;
     width: 30vw;
@@ -5,14 +13,8 @@
     min-height: 200px;
     height: 30vw;
     max-height: 400px;
-}
-
-.img-text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-    margin: 50px 5vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 
 .bio {
