@@ -5,18 +5,13 @@
     align-items: center;
     width: 100%;
     height: 75vh;
-    margin: 5vh 0; 
+    margin: 5vh 0;
 }
 
-.header {
+#header {
     font-size: 3.5rem;
     margin-left: 5vw;
     max-width: 800px;
-}
-
-.second-header {
-    text-align: center;
-    font-size: 2.5rem;
 }
 
 iframe {
@@ -25,15 +20,23 @@ iframe {
     max-width: 1100px;
     height: 100%;
     margin-right: 5vw;
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
 .certificationsDiv-container {
     margin: 120px 0;
 }
 
+#second-header {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 .certificationsDiv {
     display: flex;
-    width: 90%;
+    flex-wrap: wrap;
+    width: 92%;
     margin: 0 auto;
     gap: 5%;
     justify-content: space-around;
@@ -42,17 +45,49 @@ iframe {
 .h4-certification {
     text-align: center;
     font-size: 1.5rem;
-    margin: 0;
-}
-
-.break-certification {
-    width: 40%;
-    height: 1px;
-    margin: 14px auto;
-    background-color: rgb(0, 0, 0, .5);
+    margin: 25px 30px;
 }
 
 .img-certification {
-    width: 100%;
+    min-width: 200px;
+    width: 17vw;
+    max-width: 400px;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);
+}
+
+.img-certification:hover {
+    transform: scale(102%);
+    transition: scale 300ms ease;
+}
+
+.img-certification:active {
+    transform: scale(100%);
+}
+
+/* phones */
+@media screen and (max-width: 1100px){
+    #banner-container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    #second-header {
+        margin-top: 100px;
+    }
+    
+    iframe {
+        height: 50vh;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 502px){
+    #second-header {
+        margin-top: 200px;
+    }
 }

@@ -73,6 +73,15 @@ a {
     cursor: pointer;
 }
 
+.hamburger:hover {
+    transform: scale(102%);
+    transition: scale 300ms ease;
+}
+
+.hamburger:active {
+    transform: scale(100%);
+}
+
 .hamburger:focus {
     outline: none;
 }
