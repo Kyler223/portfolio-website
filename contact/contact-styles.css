@@ -3,10 +3,9 @@
     --contact-border-radius: 5px;
 }
 
-/* .msg-div {
-    width: 60vw;
-    border: 1px solid red;
-} */
+form {
+    margin-bottom: 200px;
+}
 
 .email-message {
     display: flex;
@@ -15,7 +14,6 @@
 }
 
 label {
-    /* margin-top: 40px; */
     line-height: 40px;
     font-size: 1.6rem;
     padding: var(--contact-padding);
