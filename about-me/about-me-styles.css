@@ -1,0 +1,22 @@
+#profile-pic {
+    min-width: 200px;
+    width: 30vw;
+    max-width: 400px;
+    min-height: 200px;
+    height: 30vw;
+    max-height: 400px;
+}
+
+.img-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin: 50px 5vw;
+}
+
+.bio {
+    width: 60vw;
+    max-width: 600px;
+    display: inline-block;
+}

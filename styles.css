@@ -156,6 +156,10 @@ footer {
     flex-basis: 100%;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* phones */
 @media screen and (max-width: 1450px){
     html {
@@ -202,6 +206,13 @@ footer {
 
     #logo {
         max-width: 380px;
+    }
+}
+
+/* phones / smaller logo */
+@media screen and (max-width: 700px){
+    #logo {
+        width: 50vw;
     }
 }
 

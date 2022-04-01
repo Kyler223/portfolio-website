@@ -27,6 +27,10 @@ iframe {
     margin-right: 5vw;
 }
 
+.certificationsDiv-container {
+    margin: 120px 0;
+}
+
 .certificationsDiv {
     display: flex;
     width: 90%;
