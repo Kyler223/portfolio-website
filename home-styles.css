@@ -68,7 +68,9 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 500px;
     width: 33vw;
+    min-width: 300px;
     margin: 0 auto;
 }
 
