@@ -78,6 +78,10 @@ iframe {
     margin: 0 12px;
 }
 
+.testimonials-content {
+    text-align: center;
+}
+
 .testimonials-date {
     margin: 0;
     color: rgb(85, 85, 85);
