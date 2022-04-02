@@ -1,5 +1,6 @@
 :root {
     --blue-accent: rgba(95, 227, 216, .85);
+    --blue-accent-darker: hsl(175, 73%, 41%);
 }
 
 body {
@@ -167,6 +168,10 @@ footer {
 
 .text-center {
     text-align: center;
+}
+
+.bold {
+    font-family: 'Montserrat-ExtraBold', Roboto, Arial;;
 }
 
 /* phones */

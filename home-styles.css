@@ -28,7 +28,7 @@ iframe {
     margin: 120px 0;
 }
 
-#second-header {
+.second-header {
     text-align: center;
     font-size: 2.5rem;
 }
@@ -100,7 +100,7 @@ iframe {
         font-size: 2rem;
     }
 
-    #second-header {
+    .second-header {
         margin-top: 100px;
     }
     
@@ -112,7 +112,7 @@ iframe {
 }
 
 @media screen and (max-width: 502px){
-    #second-header {
+    .second-header {
         margin-top: 200px;
     }
 }
