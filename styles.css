@@ -264,26 +264,31 @@ footer {
 
 /* fonts */
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-Bold";
     src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
 }
 
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-Regular";
     src: url("/fonts/montserrat/Montserrat-Regular.otf") format("opentype");
 }
 
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-Light";
     src: url("/fonts/montserrat/Montserrat-Light.otf") format("opentype");
 }
 
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-Medium";
     src: url("/fonts/montserrat/Montserrat-Medium.otf") format("opentype");
 }
 
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-ExtraBold";
     src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") format("opentype");
 }
