@@ -1,5 +1,5 @@
 :root {
-    --blue-accent: rgba(95, 227, 216, .85);
+    --blue-accent: rgba(0, 162, 197, 1);
     --blue-accent-darker: hsl(175, 73%, 41%);
 }
 
@@ -21,6 +21,8 @@ nav {
 }
 
 #logo {
+    width: 80%;
+    height: 80%;
     max-width: 280px;
     display: inline-block;
     padding: 5px;
@@ -155,7 +157,7 @@ footer {
 
 /* boilerplate code */
 .highlight-blue {
-    color: #61BACD;
+    color: var(--blue-accent);
 }
 
 .text-align-center {

@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React, Web Development, Web Developer, Frontend, Websites, Optimize Website, Fast Website, Slow Website, SEO, Make Website, Custom Website">
+    <meta name="description" content="Kyler Nelson is a web developer that makes fast, responsive, and SEO optimized websites">
+    <meta name="author" content="Kyler Nelson">
     <title>Kyler Nelson</title>
     <!-- stylesheets -->
     <link rel="stylesheet" href="styles.css" type="text/css">
@@ -21,7 +25,7 @@
 <body>
     <header>
         <nav>
-            <a href="/"><img id="logo" src="images/KylerNelson.dev_logo.svg"></a>
+            <a href="/" title="Home"><img id="logo" alt="Kyler Nelson.dev's Logo" src="images/KylerNelson.dev_logo.svg"></a>
             <ul class="nav-links" id="nav-links">
                 <a href="/"><li class="nav-item border-right">Home</li></a>
                 <a href="/my-work"><li class="nav-item border-right">My Work</li></a>
@@ -29,7 +33,7 @@
                 <a href="/contact"><li id="contactDropdown" class="nav-item"></li></a>
             </ul>
             <a href="/contact"><button id="contact">Contact</button></a>
-            <button id="hamburger" class="hamburger" onclick="hamburgerClick()">
+            <button aria-label="expand or collapse nav button" id="hamburger" class="hamburger" onclick="hamburgerClick()">
                 <i class="fa-solid fa-bars fa-3x"></i>
             </button>
         </nav>
@@ -37,7 +41,7 @@
     <main>
         <div id="banner-container">
             <h1 id="header" class="bold">Creating <span class="highlight-blue">Modern</span> Websites For Your Business</h1>
-            <iframe src="my-work/HighKey-LowKey/index.html" id="bannerIframe" onmouseenter="iframeMouseEnter()" onmouseout="iframeMouseOut()"></iframe>
+            <iframe title="HighKey - LowKey" src="my-work/HighKey-LowKey/index.html" id="bannerIframe" onmouseenter="iframeMouseEnter()" onmouseout="iframeMouseOut()"></iframe>
         </div>
         <div class="certificationsDiv-container reveal">
             <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson">
@@ -46,25 +50,25 @@
             <div class="certificationsDiv">
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7">
                     <div class="single-certification">
-                        <h4 title="Click here for the real HTML certificate" class="h4-certification">HTML</h4>
+                        <h3 title="Click here for the real HTML certificate" class="h3-certification">HTML</h3>
                         <img title="Click here for the real HTML certificate" alt="Learn HTML certificate" class="img-certification" src="images/html.png"/>
                     </div>
                 </a>
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05">
                     <div class="single-certification">
-                        <h4 title="Click here for the real CSS certificate" class="h4-certification">CSS</h4>
+                        <h3 title="Click here for the real CSS certificate" class="h3-certification">CSS</h3>
                         <img title="Click here for the real CSS certificate" alt="Learn CSS certificate" class="img-certification" src="images/css.png"/>
                     </div>
                 </a>
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e">
                     <div class="single-certification">
-                        <h4 title="Click here for the real Javascript certificate" class="h4-certification">Javascript</h4>
+                        <h3 title="Click here for the real Javascript certificate" class="h3-certification">Javascript</h3>
                         <img title="Click here for the real Javascript certificate" alt="Learn Javascript certificate" class="img-certification" src="images/javascript.png"/>
                     </div>
                 </a>
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b">
                     <div class="single-certification">
-                        <h4 title="Click here for the real React certificate" class="h4-certification">React</h4>
+                        <h3 title="Click here for the real React certificate" class="h3-certification">React</h3>
                         <img title="Click here for the real React certificate" alt="Learn React certificate" class="img-certification" src="images/react.png"/>
                     </div>
                 </a>
@@ -80,7 +84,7 @@
                     <i class="fa-solid fa-star highlight-blue"></i>
                     <i class="fa-solid fa-star highlight-blue"></i>
                     <i class="fa-solid fa-star highlight-blue"></i>
-                    <h5 class="stars-header bold">5 Stars</h5>
+                    <h3 class="stars-header bold">5 Stars</h3>
                     <div class="flex-break"></div>
                     <p class="testimonials-content">"Kyler is very skilled and it is super easy to communicate with him. He understands right away what you need and does it perfectly. I will definitely hire him again when needed."</p>
                     <div class="flex-break"></div>
@@ -90,7 +94,7 @@
     </main>
     <footer>
         <div class="footer-container">
-            <h4 class="footer-header">Social Media</h4>
+            <h3 class="footer-header">Social Media</h3>
             <a href="https://github.com/Kyler223" target="_blank">
                 <i class="fa-brands fa-github-square fa-xl"></i>
                 <p class="footer-p">Github</p>

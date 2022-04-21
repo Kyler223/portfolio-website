@@ -42,7 +42,7 @@ iframe {
     justify-content: space-around;
 }
 
-.h4-certification {
+.h3-certification {
     text-align: center;
     font-size: 1.5rem;
     margin: 25px 30px;
@@ -51,6 +51,7 @@ iframe {
 .img-certification {
     min-width: 250px;
     width: 17vw;
+    height: auto;
     max-width: 400px;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);
 }
@@ -101,7 +102,7 @@ iframe {
     }
 
     .second-header {
-        margin-top: 100px;
+        margin-top: 200px;
     }
     
     iframe {
@@ -111,8 +112,8 @@ iframe {
     }
 }
 
-@media screen and (max-width: 502px){
+@media screen and (max-width: 611px){
     .second-header {
-        margin-top: 200px;
+        padding-top: 150px;
     }
 }
