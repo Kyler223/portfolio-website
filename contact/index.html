@@ -7,6 +7,7 @@
     <meta name="description" content="Kyler Nelson is a web developer that makes fast, responsive, and SEO optimized websites">
     <meta name="author" content="Kyler Nelson">
     <title>Contact - Kyler Nelson</title>
+    <meta name="theme-color" content="#ffffff"/>
     <!-- stylesheets -->
     <link rel="stylesheet" href="/styles.css" type="text/css">
     <link rel="stylesheet" href="contact-styles.css" type="text/css">
@@ -24,15 +25,15 @@
 <body>
     <header>    
         <nav>
-            <a href="/"><img id="logo" src="/images/KylerNelson.dev_logo.svg"></a>
+            <a href="/" title="Home"><img id="logo" alt="Kyler Nelson.dev's Logo" src="/images/KylerNelson.dev_logo.svg"></a>
             <ul class="nav-links" id="nav-links">
-                <a href="/"><li class="nav-item border-right">Home</li></a>
-                <a href="/my-work"><li class="nav-item border-right">My Work</li></a>
-                <a href="/about-me"><li class="nav-item">About Me</li></a>
-                <a href=""><li id="contactDropdown" class="nav-item"></li></a>
+                <a href="/" title="Home"><li class="nav-item border-right">Home</li></a>
+                <a href="/my-work" title="My Work"><li class="nav-item border-right">My Work</li></a>
+                <a href="/about-me" title="About Me"><li class="nav-item">About Me</li></a>
+                <a href="/contact" title="Contact"><li id="contactDropdown" class="nav-item"></li></a>
             </ul>
-            <a href=""><button id="contact">Contact</button></a>
-            <button id="hamburger" class="hamburger" onclick="hamburgerClick()">
+            <a href="/contact" title="Contact"><button id="contact">Contact</button></a>
+            <button aria-label="expand or collapse nav button" id="hamburger" class="hamburger" onclick="hamburgerClick()">
                 <i class="fa-solid fa-bars fa-3x"></i>
             </button>
         </nav>
@@ -52,14 +53,14 @@
                 <div class="flex-break"></div>
                 <input id="email-input" name="email"size="30" type="email" maxlength="100" placeholder="your-email@email.com" required>
                 <button type="submit" id="send">Send
-                    <img id="send-icon" src="/images/paper-plane-top.svg">
+                    <img id="send-icon" alt="Send Icon" src="/images/paper-plane-top.svg">
                 </button>
             </div>
         </form>
     </main>
     <footer>
         <div class="footer-container">
-            <h4 class="footer-header">Social Media</h4>
+            <h2 class="footer-header">Social Media</h2>
             <a href="https://github.com/Kyler223" target="_blank">
                 <i class="fa-brands fa-github-square fa-xl"></i>
                 <p class="footer-p">Github</p>

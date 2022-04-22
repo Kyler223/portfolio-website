@@ -6,6 +6,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, React, Web Development, Web Developer, Frontend, Websites, Optimize Website, Fast Website, Slow Website, SEO, Make Website, Custom Website">
     <meta name="description" content="Kyler Nelson is a web developer that makes fast, responsive, and SEO optimized websites">
     <meta name="author" content="Kyler Nelson">
+    <meta name="theme-color" content="#ffffff"/>
     <title>About Me - Kyler Nelson</title>
     <!-- stylesheets -->
     <link rel="stylesheet" href="/styles.css" type="text/css">
@@ -23,15 +24,15 @@
 <body>
     <header>
         <nav>
-            <a href="/"><img id="logo" src="/images/KylerNelson.dev_logo.svg"></a>
+            <a href="/" title="Home"><img id="logo" alt="Kyler Nelson.dev's Logo" src="/images/KylerNelson.dev_logo.svg"></a>
             <ul class="nav-links" id="nav-links">
-                <a href="/"><li class="nav-item border-right">Home</li></a>
-                <a href="/my-work"><li class="nav-item border-right">My Work</li></a>
-                <a href=""><li class="nav-item">About Me</li></a>
-                <a href="/contact"><li id="contactDropdown" class="nav-item"></li></a>
+                <a href="/" title="Home"><li class="nav-item border-right">Home</li></a>
+                <a href="/my-work" title="My Work"><li class="nav-item border-right">My Work</li></a>
+                <a href="/about-me" title="About Me"><li class="nav-item">About Me</li></a>
+                <a href="/contact" title="Contact"><li id="contactDropdown" class="nav-item"></li></a>
             </ul>
-            <a href="/contact"><button id="contact">Contact</button></a>
-            <button id="hamburger" class="hamburger" onclick="hamburgerClick()">
+            <a href="/contact" title="Contact"><button id="contact">Contact</button></a>
+            <button aria-label="expand or collapse nav button" id="hamburger" class="hamburger" onclick="hamburgerClick()">
                 <i class="fa-solid fa-bars fa-3x"></i>
             </button>
         </nav>
@@ -39,7 +40,7 @@
     <main>
         <h1 class="text-center bold">About Me</h1>
         <div class="img-text-container">
-            <img class="pic-about-me" src="../images/pfp.webp">
+            <img class="pic-about-me" alt="Picture of Kyler Nelson" src="../images/pfp.webp">
             <div class="bio">
                 <h2 class="bio-text bold">Introduction To Programming</h2>
                 <p>
@@ -87,12 +88,12 @@
                     My goal is to get a remote job in web development / design in the near future.
                 </p>
             </div>
-            <img class="pic-about-me" src="../images/code.webp">
+            <img class="pic-about-me" alt="Screenshot of JavaScript" src="../images/code.webp">
         </div>
     </main>
     <footer>
         <div class="footer-container">
-            <h4 class="footer-header">Social Media</h4>
+            <h2 class="footer-header">Social Media</h2>
             <a href="https://github.com/Kyler223" target="_blank">
                 <i class="fa-brands fa-github-square fa-xl"></i>
                 <p class="footer-p">Github</p>
