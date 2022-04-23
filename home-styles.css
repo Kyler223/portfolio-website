@@ -51,8 +51,10 @@ iframe {
 .img-certification {
     min-width: 250px;
     width: 17vw;
-    height: auto;
     max-width: 400px;
+    min-height: 190px;
+    height: 12.92vw;
+    max-height: 304px;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);
 }
 

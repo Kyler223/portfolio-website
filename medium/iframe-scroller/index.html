@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kyler Nelson</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="/fontawesome-6.0/css/all.css">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <!-- javascript -->
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://kylernelson.dev"><img id="logo" src="/images/KylerNelson.dev_logo.svg"></a>
+            <ul class="nav-links" id="nav-links">
+                <a href="https://kylernelson.dev/products"><li class="nav-item border-right">Products</li></a>
+                <a href="https://kylernelson.dev/my-work"><li class="nav-item border-right">My Work</li></a>
+                <a href="https://kylernelson.dev/about-me"><li class="nav-item">About Me</li></a>
+                <a href="https://kylernelson.dev/contact"><li id="contactDropdown" class="nav-item"></li></a>
+            </ul>
+            <a href="https://kylernelson.dev/contact"><button id="contact">Contact</button></a>
+            <button id="hamburger" class="hamburger" onclick="hamburgerClick()">
+                <i class="fa-solid fa-bars fa-3x"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div id="banner-container">
+            <h1 class="header">Creating <span class="highlight-blue">Modern</span> Websites For Your Business</h1>
+            <iframe src="/HighKey-LowKey/index.html" id="bannerIframe" onmouseenter="iframeMouseEnter()" onmouseout="iframeMouseOut()"></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <h4 class="footer-header">Social Media</h4>
+            <a href="https://github.com/Kyler223" target="_blank">
+            <i class="fa-brands fa-github-square fa-xl"></i>
+            <p class="footer-p">Github</p>
+            </a>
+            <br>
+            <br>
+            <a href="https://medium.com/@KylerNelson" target="_blank">
+            <i class="fa-brands fa-medium fa-xl"></i>
+            <p class="footer-p">Medium</p>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
