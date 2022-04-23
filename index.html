@@ -14,9 +14,6 @@
 
     <link rel="preload" href="home-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="home-styles.css"></noscript>
-    <!-- fontawesome -->
-    <link rel="preload" href="/fontawesome-6.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/fontawesome-6.0/css/all.css"></noscript>
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -38,9 +35,7 @@
                 <a href="/contact" title="Contact"><li id="contactDropdown" class="nav-item"></li></a>
             </ul>
             <a href="/contact" title="Contact"><button id="contact">Contact</button></a>
-            <button aria-label="expand or collapse nav button" id="hamburger" class="hamburger" onclick="hamburgerClick()">
-                <i class="fa-solid fa-bars fa-3x"></i>
-            </button>
+            <img alt="expand or collapse nav button" id="hamburger" class="hamburger" src="/svgs/bars-white.svg" onclick="hamburgerClick()">
         </nav>
     </header>
     <main>
@@ -84,11 +79,11 @@
                 <h2 title="Click here to see see my Upwork profile" class="second-header bold">Testimonials</h2>
             </a>
                 <div class="testimonials-div">
-                    <i class="fa-solid fa-star highlight-blue"></i>
-                    <i class="fa-solid fa-star highlight-blue"></i>
-                    <i class="fa-solid fa-star highlight-blue"></i>
-                    <i class="fa-solid fa-star highlight-blue"></i>
-                    <i class="fa-solid fa-star highlight-blue"></i>
+                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
                     <h3 class="stars-header bold">5 Stars</h3>
                     <div class="flex-break"></div>
                     <p class="testimonials-content">"Kyler is very skilled and it is super easy to communicate with him. He understands right away what you need and does it perfectly. I will definitely hire him again when needed."</p>
@@ -101,14 +96,16 @@
         <div class="footer-container">
             <h2 class="footer-header">Social Media</h2>
             <a href="https://github.com/Kyler223" target="_blank">
-                <i class="fa-brands fa-github-square fa-xl"></i>
-                <p class="footer-p">Github</p>
+                <div class="footer-icon-text-div">
+                    <img alt="Github Icon" class="icon" src="/svgs/github-square.svg">
+                    <p class="footer-p">Github</p>
+                </div>
             </a>
-            <br>
-            <br>
             <a href="https://medium.com/@KylerNelson" target="_blank">
-                <i class="fa-brands fa-medium fa-xl"></i>
-                <p class="footer-p">Medium</p>
+                <div class="footer-icon-text-div">
+                    <img alt="Medium Icon" class="icon" src="/svgs/medium.svg">
+                    <p class="footer-p">Medium</p>
+                </div>
             </a>
         </div>
     </footer>
