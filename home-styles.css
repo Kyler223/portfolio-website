@@ -67,14 +67,22 @@ iframe {
     transform: scale(100%);
 }
 
+.testimonials-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+}
+
 .testimonials-div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 500px;
+    max-width: 425px;
     width: 33vw;
     min-width: 300px;
-    margin: 0 auto;
+    padding: 10px 40px;
 }
 
 .stars-header {
