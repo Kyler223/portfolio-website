@@ -9,11 +9,8 @@
     <meta name="theme-color" content="#ffffff"/>
     <title>Kyler Nelson</title>
     <!-- stylesheets -->
-    <link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
-
-    <link rel="preload" href="home-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="home-styles.css"></noscript>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="home-styles.css">
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -24,10 +21,12 @@
     <script defer type="text/javascript" src="iframe-scroller.js"></script>
     <script defer type="text/javascript" src="reveal.js"></script>
 </head>
-<body>
+<body style="margin: 0;padding: 0;">
     <header>
-        <nav>
-            <a href="/" title="Home"><img id="logo" alt="Kyler Nelson.dev's Logo" src="/images/KylerNelson.dev_logo.svg"></a>
+        <nav width="100%" height="5%" style="background-color: rgba(25, 25, 25, 1);display: flex;">
+            <a href="/" title="Home">
+                <img id="logo" alt="Kyler Nelson.dev's Logo" width="40%" height="50%" src="/images/KylerNelson.dev_logo.svg">
+            </a>
             <ul class="nav-links" id="nav-links">
                 <a href="/" title="Home"><li class="nav-item border-right">Home</li></a>
                 <a href="/my-work" title="My Work"><li class="nav-item border-right">My Work</li></a>
@@ -35,41 +34,41 @@
                 <a href="/contact" title="Contact"><li id="contactDropdown" class="nav-item"></li></a>
             </ul>
             <a href="/contact" title="Contact"><button id="contact">Contact</button></a>
-            <img alt="expand or collapse nav button" id="hamburger" class="hamburger" src="/svgs/bars-white.svg" onclick="hamburgerClick()">
+            <img alt="expand or collapse nav button" id="hamburger" width="35px" height="35px" class="hamburger" src="/svgs/bars-white.svg" onclick="hamburgerClick()">
         </nav>
     </header>
     <main>
-        <div id="banner-container">
+        <div id="banner-container" style="display: flex;margin: 5vh 0;" width="100%" height="75%">
             <h1 id="header" class="bold">Creating <span class="highlight-blue">Modern</span> Websites For Your Business</h1>
-            <iframe title="HighKey - LowKey" src="/HighKey-LowKey/index.html" id="bannerIframe" onmouseenter="iframeMouseEnter()" onmouseout="iframeMouseOut()"></iframe>
+            <iframe title="HighKey - LowKey" src="/HighKey-LowKey/index.html" width="100%" height="700px" id="bannerIframe" onmouseenter="iframeMouseEnter()" onmouseout="iframeMouseOut()"></iframe>
         </div>
         <div class="certificationsDiv-container reveal">
             <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson">
                 <h2 title="Click here to see all my Codecademy certificates" class="second-header bold">My Certificates</h2>
             </a>
-            <div class="certificationsDiv">
+            <div class="certificationsDiv" style="display: flex;">
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7">
-                    <div class="single-certification">
+                    <div>
                         <h3 title="Click here for the real HTML certificate" class="h3-certification">HTML</h3>
-                        <img title="Click here for the real HTML certificate" alt="Learn HTML certificate" class="img-certification" src="images/html.png"/>
+                        <img title="Click here for the real HTML certificate" width="17%" width="12.92%" alt="Learn HTML certificate" class="img-certification" src="images/html.png"/>
                     </div>
                 </a>
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05">
-                    <div class="single-certification">
+                    <div>
                         <h3 title="Click here for the real CSS certificate" class="h3-certification">CSS</h3>
-                        <img title="Click here for the real CSS certificate" alt="Learn CSS certificate" class="img-certification" src="images/css.png"/>
+                        <img title="Click here for the real CSS certificate" width="17%" width="12.92%" alt="Learn CSS certificate" class="img-certification" src="images/css.png"/>
                     </div>
                 </a>
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e">
-                    <div class="single-certification">
+                    <div>
                         <h3 title="Click here for the real Javascript certificate" class="h3-certification">Javascript</h3>
-                        <img title="Click here for the real Javascript certificate" alt="Learn Javascript certificate" class="img-certification" src="images/javascript.png"/>
+                        <img title="Click here for the real Javascript certificate" width="17%" width="12.92%" alt="Learn Javascript certificate" class="img-certification" src="images/javascript.png"/>
                     </div>
                 </a>
                 <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b">
-                    <div class="single-certification">
+                    <div>
                         <h3 title="Click here for the real React certificate" class="h3-certification">React</h3>
-                        <img title="Click here for the real React certificate" alt="Learn React certificate" class="img-certification" src="images/react.png"/>
+                        <img title="Click here for the real React certificate" width="17%" width="12.92%" alt="Learn React certificate" class="img-certification" src="images/react.png"/>
                     </div>
                 </a>
             </div>
@@ -79,11 +78,11 @@
                 <h2 title="Click here to see see my Upwork profile" class="second-header bold">Testimonials</h2>
             </a>
                 <div class="testimonials-div">
-                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" width="16px" height="16px" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" width="16px" height="16px" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" width="16px" height="16px" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" width="16px" height="16px" src="/svgs/star.svg">
+                    <img alt="Star Icon" class="star" width="16px" height="16px" src="/svgs/star.svg">
                     <h3 class="stars-header bold">5 Stars</h3>
                     <div class="flex-break"></div>
                     <p class="testimonials-content">"Kyler is very skilled and it is super easy to communicate with him. He understands right away what you need and does it perfectly. I will definitely hire him again when needed."</p>
@@ -92,18 +91,18 @@
                 </div>
         </div>
     </main>
-    <footer>
+    <footer width="100%" height="300px" style="display: flex;margin-top: 100px;">
         <div class="footer-container">
             <h2 class="footer-header">Social Media</h2>
             <a href="https://github.com/Kyler223" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img alt="Github Icon" class="icon" src="/svgs/github-square.svg">
+                    <img alt="Github Icon" class="icon" width="22px" height="22px" src="/svgs/github-square.svg">
                     <p class="footer-p">Github</p>
                 </div>
             </a>
             <a href="https://medium.com/@KylerNelson" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img alt="Medium Icon" class="icon" src="/svgs/medium.svg">
+                    <img alt="Medium Icon" class="icon" width="22px" height="22px" src="/svgs/medium.svg">
                     <p class="footer-p">Medium</p>
                 </div>
             </a>
