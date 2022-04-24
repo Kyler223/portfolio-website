@@ -6,7 +6,7 @@ var afterMsgIncrement = 0;
 
 var typing = setInterval(function () {
     if(defaultMsg[increment]){
-        document.getElementById('message-input').focus();
+        // document.getElementById('message-input').focus();
         buildingStr = `${buildingStr}${defaultMsg[increment]}`;
         document.getElementById('message-input').value = buildingStr;
         increment++;

@@ -1,6 +1,11 @@
 :root {
     --blue-accent: rgb(0, 162, 197);
     --blue-accent-darker: rgb(0, 128, 156);
+    --common-width: 65vw;
+    --group-iframe-height: 65vh;
+    --common-border-radius: 10px;
+    --contact-padding: 12px;
+    --contact-border-radius: 5px;
 }
 
 body {
@@ -100,7 +105,7 @@ a {
     margin: 0 75px;
     background-color: #5FE3D8;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--common-border-radius);
     font-family: 'Montserrat-Bold', Roboto, Arial;
     font-weight: 600;
     font-size: 1rem;
@@ -305,4 +310,403 @@ footer {
     font-display: swap;
     font-family: "Montserrat-ExtraBold";
     src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") format("opentype");
+}
+
+/* home-styles */
+#banner-container {
+    display: flex;
+    gap: 2.5vw;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    margin: 5vh 0;
+}
+
+#header {
+    font-size: 3.5rem;
+    margin-left: 5vw;
+    max-width: 800px;
+}
+
+#bannerIframe {
+    flex-grow: 2;
+    width: 200%;
+    max-width: 1100px;
+    height: 100%;
+    margin-right: 5vw;
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.certificationsDiv-container {
+    margin: 120px 0;
+}
+
+.second-header {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.certificationsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 92%;
+    margin: 0 auto;
+    gap: 5%;
+    justify-content: space-around;
+}
+
+.h3-certification {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 25px 30px;
+}
+
+.img-certification {
+    min-width: 250px;
+    width: 17vw;
+    max-width: 400px;
+    min-height: 190px;
+    height: 12.92vw;
+    max-height: 304px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, .5);
+}
+
+.img-certification:hover {
+    transform: scale(102%);
+    transition: scale 300ms ease;
+}
+
+.img-certification:active {
+    transform: scale(100%);
+}
+
+.testimonials-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+}
+
+.testimonials-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 425px;
+    width: 33vw;
+    min-width: 300px;
+    padding: 10px 40px;
+}
+
+.stars-header {
+    display: inline;
+    font-size: 1rem;
+    margin: 0 12px;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+}
+
+.testimonials-content {
+    text-align: center;
+}
+
+.testimonials-date {
+    margin: 0;
+    color: rgb(85, 85, 85);
+}
+
+/* phones */
+@media screen and (max-width: 1100px){
+    #banner-container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    .certificationsDiv-container {
+        padding-top: 50px;
+    }
+    
+    #bannerIframe {
+        height: 60vh;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .certificationsDiv-container {
+        padding-top: 110px;
+    }
+}
+
+/* phones */
+@media screen and (max-width: 600px){
+    html {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (min-width: 600px){
+    html {
+        font-size: 13px !important;
+    }
+}
+
+@media screen and (min-width: 700px){
+    html {
+        font-size: 14px !important;
+    }
+}
+@media screen and (min-width: 950px){
+    html {
+        font-size: 14px !important;
+    }
+}
+@media screen and (min-width: 1050px){
+    html {
+        font-size: 15px !important;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1450px){
+    html {
+        font-size: 16px !important;
+    }
+}
+
+/* my-work-style */
+
+section {
+    margin: 100px 0;
+    text-align: center;
+}
+
+h2 {
+    margin: 25px 15vw;
+    font-size: 2.5rem;
+}
+
+.description {
+    margin: 20px 15vw;
+}
+
+.border {
+    margin: 0 auto;
+    width: 100px;
+    height: 1px;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.group {
+    height: var(--group-iframe-height);
+    width: var(--common-width);
+    max-width: 1400px;
+    border-radius: 45px;
+    transition: transform 1.3s ease, border-radius 1.3s ease, box-shadow 1.3s ease;
+    margin: 50px auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.group:hover {
+    border-radius: 0px;
+    transform: scale(102%);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+}
+
+.group:active {
+    transition: transform .25s ease;
+    transform: scale(100%);
+}
+
+.group:hover .iframe-cover{
+    border-radius: 0px;
+    width: 100%;
+    background-color: rgba(25, 25, 25, .4);
+}
+
+.group:hover .iframe-icon {
+    opacity: 100%;
+    top: 45%;
+}
+
+.group:hover .iframe-my-work{
+    border-radius: 0px;
+}
+
+.iframe-icon {
+    z-index: 100;
+    top: 50%;
+    right: 45%;
+    height: 10%;
+    filter: brightness(300%);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.3s ease, top 1s ease;
+    margin: auto;
+    color: white;
+}
+
+.iframe-cover {
+    height: var(--group-iframe-height);
+    width: var(--common-width);
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 2px solid rgba(25, 25, 25, 0);
+    border-radius: 45px;
+    position: absolute;
+    transition: border-radius 1.3s ease, background-color 1.3s ease;
+}
+
+.iframe-my-work {
+    height: 100%;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 2px solid rgb(25, 25, 25, 1);
+    background-color: rgba(25, 25, 25, 1);
+    border-radius: 45px;
+    transition: border-radius 1.3s ease, filter 1.3s ease;
+}
+
+/* phones */
+@media screen and (max-width: 1100px){
+    .group {
+        border-radius: 0px;
+        transform: scale(102%);
+        box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+    }
+
+    .iframe-cover{
+        border-radius: 0px;
+        width: 100%;
+        background-color: rgba(25, 25, 25, .4);
+    }
+    
+    .iframe-icon {
+        opacity: 100%;
+        top: 45%;
+    }
+    
+    .iframe-my-work{
+        border-radius: 0px;
+    }
+
+    .group :first-child {
+        animation: firstItemPhone 1s ease 100ms;
+    }
+}
+
+/* animations */
+@keyframes firstItemPhone {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top: 45%;
+    }
+}
+
+/* about-me-styles */
+
+.img-text-container {
+    width: var(--common-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin: 80px auto;
+}
+
+.pic-about-me {
+    min-width: 70px;
+    width: 30vw;
+    height: 100%;
+    max-width: 400px;
+    border-radius: var(--common-border-radius);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bio {
+    width: 40vw;
+    max-width: 600px;
+    display: inline-block;
+}
+
+.a {
+    color: var(--blue-accent-darker);
+}
+
+/* contact-styles */
+
+form {
+    margin-bottom: 200px;
+}
+
+.email-message {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+label {
+    line-height: 40px;
+    font-size: 1.6rem;
+    padding: var(--contact-padding);
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: var(--contact-border-radius);
+}
+
+textarea {
+    height: 45vh;
+    width: var(--common-width);
+    border-radius: var(--common-border-radius);
+    max-width: 1000px;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    padding: var(--contact-padding);
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+#email-input {
+    max-width: 500px;
+    width: 40vw;
+    min-width: 150px;
+}
+
+#send {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: var(--contact-border-radius);
+    color: black;
+    background-color: var(--blue-accent);
+    padding: 11px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat-Medium', Roboto, Arial;
+    font-weight: 100;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#send-icon {
+    width: 1rem;
+    height: 1.1rem;
+    vertical-align: middle;
+    padding-left: 2px;
+    padding-bottom: 5px;
 }

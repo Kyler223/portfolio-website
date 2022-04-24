@@ -10,7 +10,6 @@
     <title>Kyler Nelson</title>
     <!-- stylesheets -->
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="home-styles.css">
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -20,6 +19,7 @@
     <script defer type="text/javascript" src="script.js"></script>
     <script defer type="text/javascript" src="iframe-scroller.js"></script>
     <script defer type="text/javascript" src="reveal.js"></script>
+    <script defer type="text/javascript" src="contact-script.js"></script>
 </head>
 <body style="margin: 0;padding: 0;">
     <header>
@@ -29,11 +29,11 @@
             </a>
             <ul class="nav-links" id="nav-links">
                 <a href="/" title="Home"><li class="nav-item border-right">Home</li></a>
-                <a href="/my-work" title="My Work"><li class="nav-item border-right">My Work</li></a>
-                <a href="/about-me" title="About Me"><li class="nav-item">About Me</li></a>
-                <a href="/contact" title="Contact"><li id="contactDropdown" class="nav-item"></li></a>
+                <a href="#my-work" title="My Work"><li class="nav-item border-right">My Work</li></a>
+                <a href="#about-me" title="About Me"><li class="nav-item">About Me</li></a>
+                <a href="#contact-me" title="Contact"><li id="contactDropdown" class="nav-item"></li></a>
             </ul>
-            <a href="/contact" title="Contact"><button id="contact">Contact</button></a>
+            <a href="#contact-me" title="Contact"><button id="contact">Contact</button></a>
             <img alt="expand or collapse nav button" id="hamburger" width="35px" height="35px" class="hamburger" src="/svgs/bars-white.svg" onclick="hamburgerClick()">
         </nav>
     </header>
@@ -104,6 +104,125 @@
                 </div>
             </div>
         </div>
+
+
+        
+        <section class="reveal" id="my-work">
+            <h2 class="bold">My Work</h2>
+            <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
+                <h3 class="bold">HighKey | LowKey</h3>
+            </a>
+            <div class="border"></div>
+            <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
+                <p class="description">A template for a fashion website</p>
+            </a>
+            <div class="group">
+                <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
+                    <img class="iframe-icon" alt="HighKey LowKey white logo" src="images/plain-white-logo.png"/>
+                    <div class="iframe-cover"></div>
+                </a>
+                <iframe class="iframe-my-work" title="HighKey LowKey website" src="/HighKey-LowKey/index.html" scrolling="no"></iframe>
+            </div>
+        </section>
+        </a>
+        <section class="reveal">
+            <a href="https://kylernelson.dev/investment-calculator" target="_blank">
+            <h3 class="bold">Investment Calculator</h3>
+            </a>
+            <div class="border"></div>
+            <a href="https://kylernelson.dev/investment-calculator" target="_blank">
+                <p class="description">A simple calculator to see future returns on investments</p>
+            </a>
+            <div class="group">
+                <a href="https://kylernelson.dev/investment-calculator" target="_blank">
+                    <img class="iframe-icon" alt="investment calculator logo" src="images/chart-line.png"/>
+                    <div class="iframe-cover"></div>
+                </a>
+                <iframe class="iframe-my-work" title="investment calculator website" src="/investment-calculator/index.html" scrolling="no"></iframe>
+            </div>
+            </a>
+        </section>
+
+
+        <div class="reveal" id="about-me">
+            <h2 class="text-center bold">About Me</h2>
+            <div class="img-text-container">
+                <img class="pic-about-me" alt="Picture of Kyler Nelson" src="../images/pfp.webp">
+                <div class="bio">
+                    <h3 class="bio-text bold">Introduction To Programming</h3>
+                    <p>
+                        My name is Kyler Nelson. I started to code 5+ years ago. 
+                        I started out making apps on Android Studio when I was 16 years old. 
+                        They weren't very good apps because it was my first time coding. 
+                        But I just loved the process of writing code and seeing it appear right on my phone. 
+                        That was an amazing feeling, which has never faded over the years of my coding career.</p>
+                    <p>
+                        In 2020, I began to really enjoy creating Minecraft plugins. 
+                        That's where I got most of my Java experience from. 
+                        Then in 2021 I used ExtendScript (very similar to JavaScript) to make a script for Premiere Pro. 
+                        This script automated the process of making subtitles for my videos. 
+                        Then this JavaScript knowledge translated to web development.</p>
+                </div>
+            </div>
+        </div>
+        <div class="img-text-container reveal">
+            <div class="bio">
+                <h3 class="bio-text bold">Web Development</h3>
+                <p>
+                    I have been learning front-end web development from online courses on Codecademy. 
+                    I currently have 
+                    <a class="a" target="_blank" title="Link to my Codecademy profile page" href="https://www.codecademy.com/profiles/kylernelson">
+                        4 certificates</a> 
+                    from learning 
+                    <a class="a" target="_blank" title="Link to Codecademy HTML certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7">
+                        HTML</a>, 
+                    <a class="a" target="_blank" title="Link to Codecademy CSS certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05">
+                        CSS</a>, 
+                    <a class="a" target="_blank" title="Link to Codecademy JavaScript certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e">
+                        JavaScript</a>, and 
+                    <a class="a" target="_blank" title="Link to Codecademy React certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b">
+                        React</a>. 
+                    On top of that, I have been freelancing on the side with 
+                    <a class="a" target="_blank" title="Link to my Upwork profile page" href="https://www.upwork.com/freelancers/~015c7a36cfed71b897">
+                        Upwork</a>.
+                </p>
+                <p>
+                    The first real website I made is this 
+                    <a class="a" target="_blank" title="A simple calculator to see future returns on investments" href="https://kylernelson.dev/investment-calculator/">
+                        Investment Calculator</a>.
+                    Then, I'm still currently working on this 
+                    <a class="a" target="_blank" title="A template for a fashion website" href="https://kylernelson.dev/HighKey-LowKey/">
+                        Fashion Template Website</a>.
+                    My goal is to get a remote job in web development / design in the near future.
+                </p>
+            </div>
+            <img class="pic-about-me" alt="Screenshot of JavaScript" src="../images/code.webp">
+        </div>
+
+
+        <div class="reveal" id="contact-me">
+            <h2 class="text-align-center">Contact</h2>
+            <form class="email-message" method="post" onsubmit="formSubmit()" action="https://formsubmit.co/f9485bda7b05d7db1f55915b438834dc">
+                <div class="flex-break"></div>
+                <div class="msg-div">
+                    <label for="message-input">Message:</label>
+                    <div class="flex-break"></div>
+                    <textarea name="message-input" id="message-input" maxlength="1100" cols="50" rows="8" required></textarea>
+                </div>
+                <div class="flex-break"></div>
+                <div>
+                    <label for="email-input">Email:</label>
+                    <div class="flex-break"></div>
+                    <input id="email-input" name="email"size="30" type="email" maxlength="100" placeholder="your-email@email.com" required>
+                    <button type="submit" id="send">Send
+                        <img id="send-icon" alt="Send Icon" src="/images/paper-plane-top.svg">
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+
     </main>
     <footer width="100%" height="300px" style="display: flex;margin-top: 100px;">
         <div class="footer-container">
