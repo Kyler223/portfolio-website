@@ -1,4 +1,3 @@
-// var msgTextArea = document.getElementById('message-input');
 var defaultMsg = 'Dear Kyler Nelson,';
 var buildingStr = ''
 var increment = 0;
