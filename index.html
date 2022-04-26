@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS, JavaScript, React, Web Development, Web Developer, Frontend, Websites, Optimize Website, Fast Website, Slow Website, SEO, Make Website, Custom Website">
-    <meta name="description" content="Kyler Nelson is a web developer that makes fast, responsive, and SEO optimized websites">
-    <meta name="author" content="Kyler Nelson">
+    <meta name="keywords" 
+        content="HTML, CSS, JavaScript, React, Web Development, 
+            Web Developer, Frontend, Websites, Optimize Website, Fast Website, 
+            Slow Website, SEO, Make Website, Custom Website"
+        />
+    <meta name="description" 
+        content="Kyler Nelson is a web developer that makes fast, 
+        responsive, and SEO optimized websites"
+        />
+    <meta name="author" content="Kyler Nelson"/>
     <meta name="theme-color" content="#ffffff"/>
     <title>Kyler Nelson</title>
     <!-- stylesheets -->
@@ -25,222 +32,424 @@
 </head>
 <body style="margin: 0;padding: 0;">
     <header>
-        <nav width="100%" height="5%" style="background-color: rgba(25, 25, 25, 1);display: flex;">
+        <nav width="100%" height="5%" 
+             style="background-color: rgba(25, 25, 25, 1);display: flex;">
             <a href="/" title="Home" style="min-height: 25px">
-                <img id="logo" alt="Kyler Nelson.dev's Logo" width="80%" height="80%" style="min-height: 25px" loading="eager" src="/images/KylerNelson.dev_logo.svg">
+                <img src="/images/KylerNelson.dev_logo.svg" 
+                     id="logo" alt="Kyler Nelson.dev's Logo" 
+                     width="80%" height="80%" 
+                     style="min-height: 25px" 
+                     loading="eager"
+                />
             </a>
             <ul class="nav-links" id="nav-links">
-                <a href="/" title="Home"><li class="nav-item border-right">Home</li></a>
-                <a href="#my-work" title="My Work"><li class="nav-item border-right">My Work</li></a>
-                <a href="#about-me" title="About Me"><li class="nav-item">About Me</li></a>
-                <a href="#contact-me" title="Contact"><li id="contactDropdown" class="nav-item"></li></a>
+                <a href="/" title="Home">
+                    <li class="nav-item border-right">Home</li>
+                </a>
+                <a href="#my-work" title="My Work">
+                    <li class="nav-item border-right">My Work</li>
+                </a>
+                <a href="#about-me" title="About Me">
+                    <li class="nav-item">About Me</li>
+                </a>
+                <a href="#contact-me" title="Contact">
+                    <li id="contactDropdown" class="nav-item"></li>
+                </a>
             </ul>
-            <a href="#contact-me" title="Contact"><button id="contact">Contact</button></a>
-            <img alt="expand or collapse nav button" id="hamburger" width="35px" height="35px" loading="eager" class="hamburger" src="/svgs/bars-white.svg" onclick="hamburgerClick()">
+            <a href="#contact-me" title="Contact">
+                <button id="contact">Contact</button>
+            </a>
+            <img src="/svgs/bars-white.svg" 
+                 alt="expand or collapse nav button" 
+                 id="hamburger" width="35px" height="35px" 
+                 loading="eager" class="hamburger" 
+                 onclick="hamburgerClick()"
+            />
         </nav>
     </header>
     <main>
-        <div id="banner-container" style="display: flex;margin: 5vh 0;" width="100%" height="75%">
-            <h1 id="header" class="bold" style="font-size:3rem;font-weight:700;font-family: 'Montserrat-Bold', Roboto, Arial;">Creating <span class="highlight-blue">Modern</span> Websites For Your Business</h1>
-            <iframe title="HighKey - LowKey" src="/HighKey-LowKey/index.html" width="100%" height="700px" loading="eager" style="background-color:#f4c5cd" id="bannerIframe" onmouseenter="iframeMouseEnter()" onmouseout="iframeMouseOut()"></iframe>
+        <div id="banner-container" 
+             style="display: flex;margin: 5vh 0;" 
+             width="100%" 
+             height="75%">
+            <h1 id="header" 
+                class="bold" 
+                style="font-size:3rem;font-weight:700;font-family: 'Montserrat-Bold', Roboto, Arial;">
+                Creating 
+                <span class="highlight-blue">Modern</span>
+                 Websites For Your Business
+            </h1>
+            <iframe src="/HighKey-LowKey/index.html"
+                    title="HighKey - LowKey" width="100%" 
+                    height="700px" loading="eager" 
+                    style="background-color:#f4c5cd" 
+                    id="bannerIframe" 
+                    onmouseenter="iframeMouseEnter()" 
+                    onmouseout="iframeMouseOut()">
+            </iframe>
         </div>
+        <!-- certifications -->
         <div class="certificationsDiv-container reveal">
-            <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson">
-                <h2 title="Click here to see all my Codecademy certificates" class="second-header bold">My Certificates</h2>
+            <a href="https://www.codecademy.com/profiles/kylernelson" target="_blank">
+                <h2 title="Click here to see all my Codecademy certificates" 
+                    class="second-header bold">
+                    My Certificates
+                </h2>
             </a>
             <div class="certificationsDiv" style="display: flex;">
-                <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7">
+                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
+                    target="_blank">
                     <div>
-                        <h3 title="Click here for the real HTML certificate" class="h3-certification">HTML</h3>
-                        <img title="Click here for the real HTML certificate" width="20.4%" width="15.504%" loading="lazy" alt="Learn HTML certificate" class="img-certification" src="images/html.png"/>
+                        <h3 title="Click here for the real HTML certificate" 
+                            class="h3-certification">HTML</h3>
+                        <img src="images/html.png"
+                             title="Click here for the real HTML certificate" 
+                             width="20.4%" height="15.504%" 
+                             loading="lazy" 
+                             alt="Learn HTML certificate" 
+                             class="img-certification"
+                        />
                     </div>
                 </a>
-                <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05">
+                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" 
+                    target="_blank">
                     <div>
-                        <h3 title="Click here for the real CSS certificate" class="h3-certification">CSS</h3>
-                        <img title="Click here for the real CSS certificate" width="20.4%" width="15.504%" loading="lazy" alt="Learn CSS certificate" class="img-certification" src="images/css.png"/>
+                        <h3 title="Click here for the real CSS certificate" 
+                            class="h3-certification">CSS</h3>
+                        <img src="images/css.png"
+                             title="Click here for the real CSS certificate" 
+                             width="20.4%" height="15.504%" 
+                             loading="lazy" 
+                             alt="Learn CSS certificate" 
+                             class="img-certification"
+                        />
                     </div>
                 </a>
-                <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e">
+                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e" 
+                    target="_blank">
                     <div>
-                        <h3 title="Click here for the real Javascript certificate" class="h3-certification">Javascript</h3>
-                        <img title="Click here for the real Javascript certificate" width="20.4%" width="15.504%" loading="lazy" alt="Learn Javascript certificate" class="img-certification" src="images/javascript.png"/>
+                        <h3 title="Click here for the real Javascript certificate" 
+                            class="h3-certification">Javascript</h3>
+                        <img src="images/javascript.png"
+                             title="Click here for the real Javascript certificate" 
+                             width="20.4%" height="15.504%" 
+                             loading="lazy" 
+                             alt="Learn Javascript certificate" 
+                             class="img-certification" 
+                        />
                     </div>
                 </a>
-                <a target="_blank" href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b">
+                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b"
+                    target="_blank">
                     <div>
-                        <h3 title="Click here for the real React certificate" class="h3-certification">React</h3>
-                        <img title="Click here for the real React certificate" width="20.4%" width="15.504%" loading="lazy" alt="Learn React certificate" class="img-certification" src="images/react.png"/>
+                        <h3 title="Click here for the real React certificate" 
+                        class="h3-certification">React</h3>
+                        <img src="images/react.png" 
+                             title="Click here for the real React certificate" 
+                             width="20.4%" width="15.504%" 
+                             loading="lazy" alt="Learn React certificate" 
+                             class="img-certification"
+                        />
                     </div>
                 </a>
             </div>
         </div>
+        <!-- testimonials -->
         <div class="reveal testimonials">
-            <a target="_blank" href="https://www.upwork.com/freelancers/~015c7a36cfed71b897">
-                <h2 title="Click here to see see my Upwork profile" class="second-header bold">Testimonials</h2>
+            <a href="https://www.upwork.com/freelancers/~015c7a36cfed71b897" 
+                target="_blank">
+                <h2 title="Click here to see see my Upwork profile" 
+                    class="second-header bold">
+                    Testimonials
+                </h2>
             </a>
             <div class="testimonials-container">
                 <div class="testimonials-div">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <h3 class="stars-header bold">5 Stars</h3>
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <h3 class="stars-header bold">
+                        5 Stars
+                    </h3>
                     <div class="flex-break"></div>
-                    <p class="testimonials-content">"Kyler is very skilled and it is super easy to communicate with him. He understands right away what you need and does it perfectly. I will definitely hire him again when needed."</p>
+                    <p class="testimonials-content">
+                        "Kyler is very skilled and it is super easy to communicate with him. 
+                        He understands right away what you need and does it perfectly. 
+                        I will definitely hire him again when needed."
+                    </p>
                     <div class="flex-break"></div>
-                    <p class="testimonials-date">Mar 29, 2022</p>
+                    <p class="testimonials-date">
+                        Mar 29, 2022
+                    </p>
                 </div>
                 <div class="testimonials-div">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
-                    <img alt="Star Icon" class="star" width="16px" height="16px" loading="lazy" src="/svgs/star.svg">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
+                    <img src="/svgs/star.svg" alt="Star Icon" class="star" width="16px" height="16px" loading="lazy">
                     <h3 class="stars-header bold">5 Stars</h3>
                     <div class="flex-break"></div>
-                    <p class="testimonials-content">"[He] was quick, responsive, polite, and did a great job. I peppered him with details beyond the original scope of the work, and he took every suggestion and made it happen. I will definitely use him again."</p>
+                    <p class="testimonials-content">
+                        "[He] was quick, responsive, polite, and did a great job. 
+                        I peppered him with details beyond the original scope of the work, and he took every suggestion and made it happen. 
+                        I will definitely use him again."
+                    </p>
                     <div class="flex-break"></div>
-                    <p class="testimonials-date">Apr 5, 2022</p>
+                    <p class="testimonials-date">
+                        Apr 5, 2022
+                    </p>
                 </div>
             </div>
         </div>
-
-
+        <!-- my work -->
         <div class="my-work">
             <section class="reveal" id="my-work">
                 <h2 class="second-header bold">My Work</h2>
                 <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                    <h3 class="bold">HighKey | LowKey</h3>
+                    <h3 class="bold">
+                        HighKey | LowKey
+                    </h3>
                 </a>
                 <div class="border"></div>
                 <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                    <p class="description">A template for a fashion website</p>
+                    <p class="description">
+                        A template for a fashion website
+                    </p>
                 </a>
                 <div class="group">
                     <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                        <img class="iframe-icon" width="50px" height="50px" loading="lazy" alt="HighKey LowKey white logo" src="images/plain-white-logo.png"/>
+                        <img src="images/plain-white-logo.png"
+                             class="iframe-icon" 
+                             width="50px" height="50px" 
+                             loading="lazy" 
+                             alt="HighKey LowKey white logo" 
+                        />
                         <div class="iframe-cover"></div>
                     </a>
-                    <iframe class="iframe-my-work" title="HighKey LowKey website" loading="lazy" src="/HighKey-LowKey/index.html" scrolling="no"></iframe>
+                    <iframe src="/HighKey-LowKey/index.html"
+                            class="iframe-my-work" 
+                            title="HighKey LowKey website" 
+                            loading="lazy"  
+                            scrolling="no">
+                    </iframe>
                 </div>
             </section>
-            </a>
             <section class="reveal">
-                <a href="https://kylernelson.dev/investment-calculator" target="_blank">
-                <h3 class="bold">Investment Calculator</h3>
+                <a href="https://kylernelson.dev/investment-calculator" 
+                    target="_blank">
+                    <h3 class="bold">
+                        Investment Calculator
+                    </h3>
                 </a>
                 <div class="border"></div>
-                <a href="https://kylernelson.dev/investment-calculator" target="_blank">
-                    <p class="description">A simple calculator to see future returns on investments</p>
+                <a href="https://kylernelson.dev/investment-calculator" 
+                    target="_blank">
+                    <p class="description">
+                        A simple calculator to see future returns on investments
+                    </p>
                 </a>
                 <div class="group">
                     <a href="https://kylernelson.dev/investment-calculator" target="_blank">
-                        <img class="iframe-icon" alt="investment calculator logo" width="50px" height="50px" loading="lazy" src="images/chart-line.png"/>
+                        <img src="images/chart-line.png" 
+                             class="iframe-icon" 
+                             alt="investment calculator logo" 
+                             width="50px" height="50px" 
+                             loading="lazy"
+                        />
                         <div class="iframe-cover"></div>
                     </a>
-                    <iframe class="iframe-my-work" title="investment calculator website" loading="lazy" src="/investment-calculator/index.html" scrolling="no"></iframe>
+                    <iframe src="/investment-calculator/index.html" 
+                            class="iframe-my-work" 
+                            title="investment calculator website" 
+                            loading="lazy" 
+                            scrolling="no">
+                    </iframe>
                 </div>
-                </a>
             </section>
         </div>
-
+        <!-- about me -->
         <div class="about-me-container">
             <div class="reveal" id="about-me">
-                <h2 class="second-header bold">About Me</h2>
+                <h2 class="second-header bold">
+                    About Me
+                </h2>
                 <div class="img-text-container">
-                    <img class="pic-about-me" width="30%" loading="lazy" alt="Picture of Kyler Nelson" src="../images/pfp.webp">
+                    <img src="../images/pfp.webp" 
+                         class="pic-about-me" 
+                         width="30%" 
+                         loading="lazy" 
+                         alt="Picture of Kyler Nelson"
+                    />
                     <div class="bio">
-                        <h3 class="bio-text bold">Introduction To Programming</h3>
+                        <h3 class="bio-text bold">
+                            Introduction To Programming
+                        </h3>
                         <p>
                             My name is Kyler Nelson. I started to code 5+ years ago. 
                             I started out making apps on Android Studio when I was 16 years old. 
                             They weren't very good apps because it was my first time coding. 
                             But I just loved the process of writing code and seeing it appear right on my phone. 
-                            That was an amazing feeling, which has never faded over the years of my coding career.</p>
+                            That was an amazing feeling, which has never faded over the years of my coding career.
+                        </p>
                         <p>
                             In 2020, I began to really enjoy creating Minecraft plugins. 
                             That's where I got most of my Java experience from. 
                             Then in 2021 I used ExtendScript (very similar to JavaScript) to make a script for Premiere Pro. 
                             This script automated the process of making subtitles for my videos. 
-                            Then this JavaScript knowledge translated to web development.</p>
+                            Then this JavaScript knowledge translated to web development.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="img-text-container reveal">
                 <div class="bio">
-                    <h3 class="bio-text bold">Web Development</h3>
+                    <h3 class="bio-text bold">
+                        Web Development
+                    </h3>
                     <p>
                         I have been learning front-end web development from online courses on Codecademy. 
                         I currently have 
-                        <a class="a" target="_blank" title="Link to my Codecademy profile page" href="https://www.codecademy.com/profiles/kylernelson">
-                            4 certificates</a> 
+                        <a href="https://www.codecademy.com/profiles/kylernelson" 
+                            class="a" 
+                            target="_blank" 
+                            title="Link to my Codecademy profile page">
+                            4 certificates
+                        </a> 
                         from learning 
-                        <a class="a" target="_blank" title="Link to Codecademy HTML certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7">
-                            HTML</a>, 
-                        <a class="a" target="_blank" title="Link to Codecademy CSS certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05">
-                            CSS</a>, 
-                        <a class="a" target="_blank" title="Link to Codecademy JavaScript certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e">
-                            JavaScript</a>, and 
-                        <a class="a" target="_blank" title="Link to Codecademy React certificate" href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b">
-                            React</a>. 
+                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
+                            class="a" 
+                            target="_blank" 
+                            title="Link to Codecademy HTML certificate">
+                            HTML
+                        </a>, 
+                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" 
+                            class="a" 
+                            target="_blank" 
+                            title="Link to Codecademy CSS certificate">
+                            CSS
+                        </a>, 
+                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e" 
+                            class="a" 
+                            target="_blank" 
+                            title="Link to Codecademy JavaScript certificate">
+                            JavaScript
+                        </a>, and 
+                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b" 
+                            class="a" 
+                            target="_blank" 
+                            title="Link to Codecademy React certificate">
+                            React
+                        </a>. 
                         On top of that, I have been freelancing on the side with 
-                        <a class="a" target="_blank" title="Link to my Upwork profile page" href="https://www.upwork.com/freelancers/~015c7a36cfed71b897">
-                            Upwork</a>.
+                        <a href="https://www.upwork.com/freelancers/~015c7a36cfed71b897" 
+                            class="a" 
+                            target="_blank" 
+                            title="Link to my Upwork profile page">
+                            Upwork
+                        </a>.
                     </p>
                     <p>
                         The first real website I made is this 
-                        <a class="a" target="_blank" title="A simple calculator to see future returns on investments" href="https://kylernelson.dev/investment-calculator/">
-                            Investment Calculator</a>.
+                        <a href="https://kylernelson.dev/investment-calculator/" 
+                            class="a" 
+                            target="_blank" 
+                            title="A simple calculator to see future returns on investments">
+                            Investment Calculator
+                        </a>.
                         Then, I'm still currently working on this 
-                        <a class="a" target="_blank" title="A template for a fashion website" href="https://kylernelson.dev/HighKey-LowKey/">
-                            Fashion Template Website</a>.
-                        My goal is to get a remote job in web development / design in the near future.
+                        <a href="https://kylernelson.dev/HighKey-LowKey/" 
+                            class="a" 
+                            target="_blank" 
+                            title="A template for a fashion website">
+                            Fashion Template Website
+                        </a>.
+                        My goal is to have a remote job / freelance full time in web development in the near future.
                     </p>
                 </div>
-                <img class="pic-about-me" width="30%" loading="lazy" alt="Screenshot of JavaScript" src="../images/code.webp">
+                <img src="../images/code.webp" 
+                     class="pic-about-me" 
+                     width="30%" 
+                     loading="lazy" 
+                     alt="Screenshot of JavaScript" 
+                />
             </div>
         </div>
-
-
+        <!-- contact me -->
         <div class="reveal contact-me" id="contact-me">
             <h2 class="second-header">Contact</h2>
-            <form class="email-message" method="post" onsubmit="formSubmit()" action="https://formsubmit.co/f9485bda7b05d7db1f55915b438834dc">
+            <form action="https://formsubmit.co/f9485bda7b05d7db1f55915b438834dc" 
+                class="email-message" 
+                method="post" 
+                onsubmit="formSubmit()">
                 <div class="flex-break"></div>
                 <div class="msg-div">
-                    <label for="message-input">Message:</label>
+                    <label for="message-input">
+                        Message:
+                    </label>
                     <div class="flex-break"></div>
-                    <textarea name="message-input" id="message-input" maxlength="1100" cols="50" rows="8" required></textarea>
+                    <textarea name="message-input" 
+                        id="message-input" 
+                        maxlength="1100" 
+                        cols="50" rows="8" 
+                        required>
+                    </textarea>
                 </div>
                 <div class="flex-break"></div>
                 <div>
                     <label for="email-input">Email:</label>
                     <div class="flex-break"></div>
-                    <input id="email-input" name="email"size="30" type="email" maxlength="100" placeholder="your-email@email.com" required>
-                    <button type="submit" id="send">Send
-                        <img id="send-icon" alt="Send Icon" loading="lazy" src="/images/paper-plane-top.svg">
+                    <input id="email-input" 
+                        name="email" 
+                        size="30" 
+                        type="email" 
+                        maxlength="100" 
+                        placeholder="your-email@email.com" 
+                        required
+                    />
+                    <button type="submit" id="send">
+                        Send
+                        <img src="/images/paper-plane-top.svg" 
+                             id="send-icon" 
+                             alt="Send Icon" 
+                             loading="lazy"
+                        />
                     </button>
                 </div>
             </form>
         </div>
-
-
-
     </main>
+    <!-- footer -->
     <footer width="100%" height="300px" style="display: flex;margin-top: 100px;">
         <div class="footer-container">
-            <h2 class="footer-header">Social Media</h2>
+            <h2 class="footer-header">
+                Social Media
+            </h2>
             <a href="https://github.com/Kyler223" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img alt="Github Icon" class="icon" width="22px" height="22px" loading="lazy" src="/svgs/github-square.svg">
-                    <p class="footer-p">Github</p>
+                    <img src="/svgs/github-square.svg" 
+                         alt="Github Icon" 
+                         class="icon" 
+                         width="22px" height="22px" 
+                         loading="lazy"
+                    />
+                    <p class="footer-p">
+                        Github
+                    </p>
                 </div>
             </a>
             <a href="https://medium.com/@KylerNelson" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img alt="Medium Icon" class="icon" width="22px" height="22px" loading="lazy" src="/svgs/medium.svg">
-                    <p class="footer-p">Medium</p>
+                    <img src="/svgs/medium.svg" 
+                         alt="Medium Icon" 
+                         class="icon" 
+                         width="22px" height="22px" loading="lazy"
+                    />
+                    <p class="footer-p">
+                        Medium
+                    </p>
                 </div>
             </a>
         </div>
