@@ -641,6 +641,20 @@ h2 {
     margin: 80px auto;
 }
 
+/* phones */
+@media screen and (max-width: 800px){
+    .img-text-container {
+        flex-flow: row wrap;
+    }
+    .bio {
+        width: var(--common-width) !important;
+        text-align: center;
+    }
+    .pic-about-me {
+        width: 37vw !important;
+    }
+}
+
 .pic-about-me {
     min-width: 70px;
     width: 30vw;
