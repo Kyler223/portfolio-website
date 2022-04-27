@@ -17,8 +17,6 @@
     <title>Kyler Nelson</title>
     <!-- stylesheets -->
     <link href="/styles.css" rel="stylesheet">
-    <link href="/styles-actions.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="/styles-actions.css" rel="stylesheet"></noscript>
     <!-- images -->
     <link href="/images/KylerNelson.dev_logo.svg" 
         rel="preload"
@@ -56,6 +54,11 @@
                 element.type = "text/javascript";
                 document.body.appendChild(element);
             }
+            var link = document.createElement('link');
+            link.href = '/styles-actions.css';
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            document.head.appendChild(link);
         });
     </script>
     <noscript>
@@ -170,6 +173,7 @@
                              loading="lazy" 
                              alt="Learn HTML certificate" 
                              class="img-certification"
+                             srcset="images/html-small.webp 250w"
                         />
                     </div>
                 </a>
@@ -186,6 +190,7 @@
                              loading="lazy" 
                              alt="Learn CSS certificate" 
                              class="img-certification"
+                             srcset="images/css-small.webp 250w"
                         />
                     </div>
                 </a>
@@ -200,6 +205,7 @@
                              loading="lazy" 
                              alt="Learn Javascript certificate" 
                              class="img-certification" 
+                             srcset="images/javascript-small.webp 250w"
                         />
                     </div>
                 </a>
@@ -215,6 +221,7 @@
                              width="20.4%" width="15.504%" 
                              loading="lazy" alt="Learn React certificate" 
                              class="img-certification"
+                             srcset="images/react-small.webp 250w"
                         />
                     </div>
                 </a>
@@ -409,6 +416,9 @@
                          width="30%" 
                          loading="lazy" 
                          alt="Picture of Kyler Nelson"
+                         srcset="/images/pfp-medium.webp 1056w,
+                            /images/pfp-small.webp 704w,
+                            /images/pfp-smaller.webp 528w,"
                     />
                     <div class="bio">
                         <h3 class="bio-text bold">
@@ -500,6 +510,8 @@
                      width="30%" 
                      loading="lazy" 
                      alt="Screenshot of JavaScript" 
+                     srcset="/images/code-medium.webp 600w,
+                        /images/code-small.webp 400w"
                 />
             </div>
         </div>
