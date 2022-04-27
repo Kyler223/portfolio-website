@@ -1,7 +1,7 @@
 //the time it waits before page scrolls from the top
 var waitBeforePageScrolls = -50;
 //the time it waits when it hits the end of the page before looping back to the top
-var waitBeforePageTop = 100;
+var waitBeforePageTop = 50;
 //current height of the page
 var height = waitBeforePageScrolls;
 //if the mouse is hovering on iframe
