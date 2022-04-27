@@ -46,10 +46,25 @@
     <link href="/favicon/site.webmanifest" 
         rel="manifest">
     <!-- javascript -->
-    <script defer src="script.js" type="text/javascript"></script>
-    <script defer src="iframe-scroller.js" type="text/javascript"></script>
-    <script defer src="reveal.js" type="text/javascript"></script>
-    <script defer src="contact-script.js"type="text/javascript"></script>
+    <script>
+        window.addEventListener("load", function(){
+            var scriptSrcs = 
+            ["iframe-scroller.js", "script.js", "reveal.js","contact-script.js"];
+            for (var i = 0; i < scriptSrcs.length; i++) {
+                var element = document.createElement("script");
+                element.src = scriptSrcs[i];
+                element.type = "text/javascript";
+                document.body.appendChild(element);
+            }
+        });
+    </script>
+    <noscript>
+        <style>
+            .reveal {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
     <style>
         @font-face {
             font-display: swap;
@@ -116,7 +131,7 @@
             <h1 id="header" 
                 class="bold" 
                 style="font-size:3rem;font-weight:700;
-                    font-family: 'Montserrat-Bold', Roboto, Arial;">
+                    font-family: 'Montserrat-ExtraBold', Roboto, Arial;">
                 Creating 
                 <span class="highlight-blue">
                     Modern
