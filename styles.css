@@ -1,3 +1,17 @@
+/* fonts */
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat-ExtraBold";
+    src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat-Bold";
+    src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
+}
+
+
 :root {
     --blue-accent: rgb(0, 162, 197);
     --blue-accent-darker: rgb(0, 128, 156);
@@ -36,17 +50,6 @@ nav {
     margin: auto 0;
 }
 
-#logo:hover {
-    transform: scale(101%);
-    filter: brightness(105%);
-    transition: 100ms ease-out;
-}
-
-#logo:active {
-    transition: 0ms;
-    transform: scale(98%);
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -55,17 +58,6 @@ a {
 .nav-links {
     display: block;
     list-style: none;
-}
-
-.nav-links  li:hover {
-    transform: scale(101.5%);
-    opacity: .9;
-    transition: 100ms ease-out;
-}
-
-.nav-links  li:active {
-    transition: 0ms;
-    transform: scale(98%);
 }
 
 .nav-links li {
@@ -81,23 +73,6 @@ a {
     border: none;
     background-color: transparent;
     cursor: pointer;
-}
-
-.hamburger:hover {
-    transform: scale(102%);
-    transition: scale 300ms ease;
-}
-
-.hamburger:active {
-    transform: scale(100%);
-}
-
-.hamburger:focus {
-    outline: none;
-}
-
-.border-right {
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #contact {
@@ -118,80 +93,17 @@ a {
     display: none;
 }
 
-#contact:hover{
-    opacity: .9;
-}
-
-#contact:active {
-    transition: 0ms;
-    transform: scale(95%);
-}
-/* end of nav */
-
-/* footer */
-footer {
-    width: 100%;
-    height: 300px;
-    background-color: rgba(25, 25, 25, 1);
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    bottom: 0;
-    margin-top: 100px;
-}
-
-.absolute-footer {
-    position: absolute;
-}
-
-.footer-container {
-    margin: auto;
-}
-
-.footer-header {
-    font-size: 1.62rem;
-    text-decoration: underline;
-    padding-bottom: 10px;
-}
-
-.footer-icon-text-div {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.icon {
-    width: 22px;
-    height: 22px;
-    margin: auto 0;
-}
-
-.footer-p {
-    font-size: 1.3rem;
-    margin: auto 10px;
-}
-
 /* boilerplate code */
 .highlight-blue {
     color: var(--blue-accent);
-}
-
-.text-align-center {
-    text-align: center;
 }
 
 .flex-break {
     flex-basis: 100%;
 }
 
-.text-center {
-    text-align: center;
-}
-
 .bold {
-    font-family: 'Montserrat-ExtraBold', Roboto, Arial;;
+    font-family: 'Montserrat-ExtraBold', Roboto, Arial;
 }
 
 /* phones */
@@ -269,50 +181,6 @@ footer {
     }
 }
 
-/* reveal animation */
-.reveal {
-    position: relative;
-    transform: translateY(90px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-  
-.reveal.active {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-/* fonts */
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-Bold";
-    src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-Regular";
-    src: url("/fonts/montserrat/Montserrat-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-Light";
-    src: url("/fonts/montserrat/Montserrat-Light.otf") format("opentype");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-Medium";
-    src: url("/fonts/montserrat/Montserrat-Medium.otf") format("opentype");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-ExtraBold";
-    src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") format("opentype");
-}
-
 /* home-styles */
 #banner-container {
     display: flex;
@@ -373,15 +241,6 @@ footer {
     height: 15.504vw;
     max-height: 210.22px;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);
-}
-
-.img-certification:hover {
-    transform: scale(102%);
-    transition: scale 300ms ease;
-}
-
-.img-certification:active {
-    transform: scale(100%);
 }
 
 .testimonials {
@@ -490,7 +349,6 @@ footer {
 }
 
 /* my-work-style */
-
 .my-work {
     margin: var(--section-top-bottom-margin) auto;
 }
@@ -524,32 +382,6 @@ h2 {
     transition: transform 1.3s ease, border-radius 1.3s ease, box-shadow 1.3s ease;
     margin: 50px auto;
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-}
-
-.group:hover {
-    border-radius: 0px;
-    transform: scale(102%);
-    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
-}
-
-.group:active {
-    transition: transform .25s ease;
-    transform: scale(100%);
-}
-
-.group:hover .iframe-cover{
-    border-radius: 0px;
-    width: 100%;
-    background-color: rgba(25, 25, 25, .4);
-}
-
-.group:hover .iframe-icon {
-    opacity: 100%;
-    top: 45%;
-}
-
-.group:hover .iframe-my-work{
-    border-radius: 0px;
 }
 
 .iframe-icon {
@@ -675,7 +507,6 @@ h2 {
 }
 
 /* contact-styles */
-
 .contact-me {
     margin: var(--section-top-bottom-margin) auto;
 }
@@ -721,6 +552,12 @@ input, textarea {
     min-width: 150px;
 }
 
+@font-face {
+    font-display: swap;
+    font-family: "Montserrat-Medium";
+    src: url("/fonts/montserrat/Montserrat-Medium.otf") format("opentype");
+}
+
 #send {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: var(--contact-border-radius);
@@ -741,4 +578,58 @@ input, textarea {
     vertical-align: middle;
     padding-left: 2px;
     padding-bottom: 5px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(25, 25, 25, 1);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    margin-top: 100px;
+}
+
+.footer-container {
+    margin: auto;
+}
+
+.footer-header {
+    font-size: 1.62rem;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+.footer-icon-text-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    margin: auto 0;
+}
+
+.footer-p {
+    font-size: 1.3rem;
+    margin: auto 10px;
+}
+
+/* reveal animation */
+.reveal {
+    position: relative;
+    transform: translateY(90px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
 }

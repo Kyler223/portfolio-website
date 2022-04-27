@@ -1,0 +1,78 @@
+#logo:hover {
+    transform: scale(101%);
+    filter: brightness(105%);
+    transition: 100ms ease-out;
+}
+
+#logo:active {
+    transition: 0ms;
+    transform: scale(98%);
+}
+
+.nav-links  li:hover {
+    transform: scale(101.5%);
+    opacity: .9;
+    transition: 100ms ease-out;
+}
+
+.nav-links  li:active {
+    transition: 0ms;
+    transform: scale(98%);
+}
+
+.hamburger:hover {
+    transform: scale(102%);
+    transition: scale 300ms ease;
+}
+
+.hamburger:active {
+    transform: scale(100%);
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+#contact:hover{
+    opacity: .9;
+}
+
+#contact:active {
+    transition: 0ms;
+    transform: scale(95%);
+}
+
+.img-certification:hover {
+    transform: scale(102%);
+    transition: scale 300ms ease;
+}
+
+.img-certification:active {
+    transform: scale(100%);
+}
+
+.group:hover {
+    border-radius: 0px;
+    transform: scale(102%);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+}
+
+.group:active {
+    transition: transform .25s ease;
+    transform: scale(100%);
+}
+
+.group:hover .iframe-cover{
+    border-radius: 0px;
+    width: 100%;
+    background-color: rgba(25, 25, 25, .4);
+}
+
+.group:hover .iframe-icon {
+    opacity: 100%;
+    top: 45%;
+}
+
+.group:hover .iframe-my-work{
+    border-radius: 0px;
+}
