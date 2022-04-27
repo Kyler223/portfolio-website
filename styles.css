@@ -11,7 +11,6 @@
     src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
 }
 
-
 :root {
     --blue-accent: rgb(0, 162, 197);
     --blue-accent-darker: rgb(0, 128, 156);
@@ -236,9 +235,9 @@ a {
 }
 
 .img-certification {
-    width: 20.4vw;
+    width: 24.48vw;
     max-width: 276.61px;
-    height: 15.504vw;
+    height: 18.6048vw;
     max-height: 210.22px;
     box-shadow: 0 0 13px rgba(0, 0, 0, .5);
 }
