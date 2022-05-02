@@ -11,21 +11,21 @@ var scrollInterval = 5;
 //how much it scrolls per interval
 var scrollAmount = .3;
 
-setInterval(function() {
-    var iframe = document.getElementById('bannerIframe');
-    if(!hover) {
-        iframe.contentWindow.scrollTo(0, height);
-        height += scrollAmount;
-    }
-    else {
-        height = iframe.contentWindow.pageYOffset;
-    }
+// setInterval(function() {
+//     var iframe = document.getElementById('bannerIframe');
+//     if(!hover) {
+//         iframe.contentWindow.scrollTo(0, height);
+//         height += scrollAmount;
+//     }
+//     else {
+//         height = iframe.contentWindow.pageYOffset;
+//     }
 
-    if(height > iframe.contentWindow.pageYOffset + waitBeforePageTop) {
-        height = waitBeforePageScrolls;
-    }
+//     if(height > iframe.contentWindow.pageYOffset + waitBeforePageTop) {
+//         height = waitBeforePageScrolls;
+//     }
 
-}, scrollInterval);
+// }, scrollInterval);
 
 function iframeMouseEnter() {
     hover = true;
