@@ -103,9 +103,11 @@ a {
 .flex-break {
     flex-basis: 100%;
 }
-
 .bold {
     font-family: 'Montserrat-ExtraBold', Roboto, Arial;
+}
+.section-margin {
+    margin: var(--section-top-bottom-margin) auto;
 }
 
 /* phones */
