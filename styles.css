@@ -97,6 +97,9 @@ a {
 .highlight-blue {
     color: var(--blue-accent);
 }
+.highlight-blue-darker {
+    color: var(--blue-accent-darker);
+}
 .highlight-red {
     color: var(--red-accent);
 }
@@ -108,6 +111,14 @@ a {
 }
 .section-margin {
     margin: var(--section-top-bottom-margin) auto;
+}
+.underline {
+    text-decoration: underline;
+}
+.line-break {
+    border-top: 1px solid rgba(0, 0, 0, 1);
+    width: 30vh;
+    margin: 30px auto;
 }
 
 /* phones */
@@ -218,6 +229,22 @@ a {
     font-size: 2.5rem;
     width: var(--common-width);
     margin: 20px auto;
+}
+/* why you need a fast website */
+.percent-quote {
+    width: 65vw;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.percent-quote h3 {
+    font-size: 38px;
+    display: inline;
+}
+.percent-quote p {
+    font-size: 18px;
+    display: inline;
+    margin: 4px;
 }
 
 /* packages */
