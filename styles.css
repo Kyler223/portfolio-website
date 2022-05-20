@@ -19,7 +19,7 @@
     --common-border-radius: 10px;
     --contact-padding: 12px;
     --contact-border-radius: 5px;
-    --section-top-bottom-margin: 180px;
+    --section-top-bottom-margin: 170px;
     --red-accent: #eb1111;
 }
 
@@ -116,9 +116,10 @@ a {
     text-decoration: underline;
 }
 .line-break {
-    border-top: 1px solid rgba(0, 0, 0, 1);
-    width: 30vh;
-    margin: 30px auto;
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    width: 30vw;
+    max-width: 500px;
+    margin: 35px auto;
 }
 
 /* phones */
@@ -234,7 +235,7 @@ a {
 .percent-quote {
     width: 65vw;
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
 .percent-quote h3 {
@@ -246,6 +247,37 @@ a {
     display: inline;
     margin: 4px;
 }
+/* Test Your Website Performance */
+.PageSpeed-API-Form {
+    width: var(--common-width);
+    margin: 40px auto;
+}
+
+.PageSpeed-API-Form label{
+    font-size: 1.2rem;
+}
+
+#url-test-input {
+    width: 50%;
+    text-align: center;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, .3);
+    font-family: 'Montserrat-Bold', Roboto, Arial;
+}
+
+.submit-form-button {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: var(--contact-border-radius);
+    color: black;
+    background-color: #00D0FF;
+    padding: 11px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat-Bold', Roboto, Arial;
+    font-weight: 100;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    margin-left: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
 
 /* packages */
 .package-container {
@@ -256,14 +288,15 @@ a {
     width: 85vw;
     max-width: 1400px;
     margin: var(--section-top-bottom-margin) auto;
-    margin-top: 300px;
 }
 
 .package {
-    min-width: 200px;
-    width: 24vw;
-    min-height: 266px;
-    height: 35vw;
+    min-width: 250px;
+    width: 25vw;
+    max-width: 425px;
+    min-height: 400px;
+    height: 40vw;
+    max-height: 679px;
     border-radius: var(--common-border-radius);
     border: 1px solid black;
     background-color: rgba(0, 0, 0, .9);
@@ -334,6 +367,10 @@ a {
     justify-content: center;
     max-width: 425px;
     padding: 10px 20px;
+}
+
+.name-testimonial {
+    font-size: 1.5rem;
 }
 
 .stars-header {
@@ -425,7 +462,6 @@ a {
 }
 
 section {
-    margin: 100px 0;
     text-align: center;
 }
 
@@ -434,15 +470,12 @@ h2 {
     font-size: 2.5rem;
 }
 
-.description {
-    margin: 20px 15vw;
+.my-work-h3 {
+    font-size: 1.5rem;
 }
 
-.border {
-    margin: 0 auto;
-    width: 100px;
-    height: 1px;
-    background-color: rgb(0, 0, 0, 0.7);
+.description {
+    margin: 20px 15vw;
 }
 
 .group {
@@ -489,6 +522,10 @@ h2 {
     background-color: rgba(25, 25, 25, 1);
     border-radius: 45px;
     transition: border-radius 1.3s ease, filter 1.3s ease;
+}
+
+.investment-iframe {
+    margin-top: 150px;
 }
 
 /* phones */
@@ -627,20 +664,6 @@ input, textarea {
     font-display: swap;
     font-family: "Montserrat-Medium";
     src: url("/fonts/montserrat/Montserrat-Medium.otf") format("opentype");
-}
-
-#send {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: var(--contact-border-radius);
-    color: black;
-    background-color: var(--blue-accent);
-    padding: 11px;
-    font-size: 1.3rem;
-    font-family: 'Montserrat-Medium', Roboto, Arial;
-    font-weight: 100;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    margin-left: 5px;
-    margin-top: 5px;
 }
 
 #send-icon {

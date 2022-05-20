@@ -46,7 +46,7 @@
     <script>
         window.addEventListener("load", function(){
             var scriptSrcs = 
-            ["iframe-scroller.js", "script.js", "reveal.js","contact-script.js"];
+            ["iframe-scroller.js", "hamburgerClick.js", "reveal.js", "page-speed-insights.js","contact-script.js"];
             for (var i = 0; i < scriptSrcs.length; i++) {
                 var element = document.createElement("script");
                 element.src = scriptSrcs[i];
@@ -150,7 +150,7 @@
             </iframe>
         </div>
         <!-- why you need a fast website -->
-        <section class="why-fast-container section-margin">
+        <section class="why-fast-container section-margin reveal">
             <h2 class="second-header bold">
             Why Should You Have A Fast Website?
             </h2>
@@ -158,34 +158,49 @@
             <div class="percent-quote">
                 <p>
                     There are 2 big benefits when you have a fast website:
-                    <span class="underline bold highlight-blue-darker">better customer experience</span> 
+                    <span class="bold highlight-blue-darker">better customer experience</span> 
                     and 
-                    <span class="underline bold highlight-blue-darker">ranking higher on search engines</span>.
+                    <span class="bold highlight-blue-darker">ranking higher on search engines</span>.
                 </p>
             </div>
             <div class="percent-quote">
                 <h3>"53%</h3>
                 <img src="/images/red-down-arrow.svg"
                     width="20px" height="20px" />
-                <p>of people will leave a mobile site if it takes more than three seconds to load"</p>
+                <p>of people will leave a mobile site if it takes more than three seconds to load" - Google</p>
             </div>
             <div class="percent-quote">
                 <p>“mobile pages that loaded one second faster saw up to </p>
                 <h3>27%</h3>
                 <img src="/images/green-up-arrow.svg"
                     width="20px" height="20px" />
-                <p> increase in conversion rates"</p>
+                <p> increase in conversion rates" - Google</p>
             </div>
+        </section>
+        <!-- how fast is your website? -->
+        <section class="section-margin reveal" id="website-test-section">
+            <h2 class="second-header bold">
+                Test Your Website Performance
+            </h2>
+            <div class="line-break"></div>
+            <form action="" class="PageSpeed-API-Form">
+                <label>Get insights about your website through Google's PageSpeed Insights API</label>
+                <br>
+                <input type="url" id="url-test-input" placeholder="Input your website URL">
+                <input type="submit" value="Run Test" class="submit-form-button" id="url-run-test-button">
+            </form>
+            <!-- page-speed-insights.js adds new elements here -->
         </section>
             <!-- better Search Engine ranking -->
             <!-- more customers which may mean more money -->
             <!-- better customer experience -->
         <!-- what I can do for you -->
         <!-- packages -->
-        <section class="package-container section-margin">
+        <section class="package-container section-margin reveal">
             <h2 class="second-header bold">
             Packages
             </h2>
+            <!-- <div class="line-break"></div> -->
             <div class="package">
                 <div class="package-header"
                     style="background-color: #00D0FF;">
@@ -216,6 +231,7 @@
                     class="second-header bold">
                     My Certificates
                 </h2>
+                <div class="line-break"></div>
             </a>
             <div class="certificationsDiv" style="display: flex;">
                 <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
@@ -294,10 +310,11 @@
                     class="second-header bold">
                     Testimonials
                 </h2>
+                <div class="line-break"></div>
             </a>
             <div class="testimonials-container">
                 <div class="testimonials-div">
-                    <h3 class="bold">
+                    <h3 class="bold name-testimonial">
                         Caroline I.
                     </h3>
                     <div class="flex-break"></div>
@@ -346,7 +363,7 @@
                     </p>
                 </div>
                 <div class="testimonials-div">
-                    <h3 class="bold">
+                    <h3 class="bold name-testimonial">
                         Abigail H.
                     </h3>
                     <div class="flex-break"></div>
@@ -399,12 +416,12 @@
             style="margin: 180px auto;">
             <section class="reveal" id="my-work">
                 <h2 class="second-header bold">My Work</h2>
+                <div class="line-break"></div>
                 <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                    <h3 class="bold">
+                    <h3 class="bold my-work-h3">
                         HighKey | LowKey
                     </h3>
                 </a>
-                <div class="border"></div>
                 <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
                     <p class="description">
                         A template for a fashion website.
@@ -428,14 +445,13 @@
                     </iframe>
                 </div>
             </section>
-            <section class="reveal">
+            <section class="reveal investment-iframe">
                 <a href="https://kylernelson.dev/investment-calculator" 
                     target="_blank">
-                    <h3 class="bold">
+                    <h3 class="bold my-work-h3">
                         Investment Calculator
                     </h3>
                 </a>
-                <div class="border"></div>
                 <a href="https://kylernelson.dev/investment-calculator" 
                     target="_blank">
                     <p class="description">
@@ -607,7 +623,7 @@
                         placeholder="your-email@email.com" 
                         required
                     />
-                    <button type="submit" id="send">
+                    <button type="submit" class="submit-form-button" id="send">
                         Send
                         <img src="/images/paper-plane-top.svg" 
                              id="send-icon" 
