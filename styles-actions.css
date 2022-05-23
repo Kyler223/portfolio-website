@@ -76,3 +76,12 @@
 .group:hover .iframe-my-work{
     border-radius: 0px;
 }
+
+.submit-form-button:hover {
+    opacity: .88;
+}
+
+.submit-form-button:active {
+    transition: 0ms;
+    transform: scale(97%);
+}
