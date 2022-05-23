@@ -183,11 +183,22 @@
                 Test Your Website Performance
             </h2>
             <div class="line-break"></div>
-            <form action="" class="PageSpeed-API-Form">
-                <label>Get insights about your website through Google's PageSpeed Insights API</label>
+            <form class="PageSpeed-API-Form" id="PageSpeed-API-Form">
+                <label id="website-test-label">
+                    Get insights about your website through Google's PageSpeed Insights API
+                </label>
                 <br>
-                <input type="url" id="url-test-input" placeholder="Input your website URL">
-                <input type="submit" value="Run Test" class="submit-form-button" id="url-run-test-button">
+                <p id="website-test-alert" class="highlight-red"></p>
+                <input type="url" 
+                    id="url-test-input" 
+                    placeholder="Input your website URL"
+                />
+                <input type="submit" 
+                    value="Run Test" 
+                    class="submit-form-button" 
+                    id="url-run-test-button"
+                    onclick="checkURL()"
+                />
             </form>
             <!-- page-speed-insights.js adds new elements here -->
         </section>

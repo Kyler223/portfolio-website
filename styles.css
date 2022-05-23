@@ -253,7 +253,7 @@ a {
     margin: 40px auto;
 }
 
-.PageSpeed-API-Form label{
+#website-test-label{
     font-size: 1.2rem;
 }
 
@@ -262,6 +262,10 @@ a {
     text-align: center;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, .3);
     font-family: 'Montserrat-Bold', Roboto, Arial;
+}
+
+#web-test-alert {
+    font-size: 1.1rem;
 }
 
 .submit-form-button {
