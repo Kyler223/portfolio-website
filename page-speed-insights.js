@@ -16,17 +16,17 @@ function formSubmit(event) {
 
 function checkURL() {
     websiteTestAlert.textContent = "";
-    const UsersURL = urlTestInput.value;
+    var UsersURL = urlTestInput.value;
     console.log(UsersURL);
     var error = false;
 
-    if(!UsersURL.startsWith("https://") && !UsersURL.startsWith("http://")) {
-        websiteTestAlert.textContent = `Your URL needs to start with 'https://' or 'http://'`;
+    if(!UsersURL.includes('.')) {
+        websiteTestAlert.textContent = `Your input does not contain '.'`;
         error = true;
     }
 
-    if(!UsersURL.includes('.')) {
-        websiteTestAlert.textContent = `Your input does not contain '.'`;
+    if(UsersURL === '.') {
+        websiteTestAlert.textContent = `Your input cannot be '.'`;
         error = true;
     }
 
@@ -35,70 +35,66 @@ function checkURL() {
         error = true;
     }
 
-    // let response = await fetch(theURL);
-    // console.log(response.status);
-    console.log(`url error: ${error}`);
-    if(!error){
+    if(!error) {
         runWebsiteTest();
+        //not working fetch
+        //
+        // fetch(UsersURL)
+        // .then(response => {
+        //   console.log('response.status: ', response.status);
+        //   if(response.ok){
+        //       runWebsiteTest();
+        //   }
+        //   else {
+        //     websiteTestAlert.textContent = `Could not reach URL (Error Code ${response.status})`;
+        //   }
+        // })
+        // .catch(err => {
+        //   console.log(err);
+        // });
     }
+
 }
 
 function runWebsiteTest() {
     console.log('Running: runWebsiteTest()');
-    websiteTestAlert.textContent = "";
-    loading();
+    websiteTestAlert.textContent = '';
+    const pageTested = document.getElementById('page-tested');
+    pageTested.textContent = '';
+
+    document.documentElement.style.setProperty('--metrics-display', 'block');
+    document.documentElement.style.setProperty('--ring-opacity', .4);
+    document.documentElement.style.setProperty('--loading-bar-and-label-opacity', 1);
 
     //request json from api
-    const url = setUpQuery(urlTestInput.value);
+    var UsersURL = urlTestInput.value;
+    loading(UsersURL);
+    if(!UsersURL.startsWith("https://") || !UsersURL.startsWith("http://")) {
+        UsersURL = "http://" + UsersURL;
+    }
+    const url = setUpQuery(UsersURL);
     fetch(url)
         .then(response => response.json())
         .then(json => {
-
+        
+        //done loading
         loadingBar.style.width = `100%`;
         stepValue = 100;
-        clearInterval(id);   
+        clearInterval(id); 
         console.log(json);
-
-        const page = document.createElement('p');
-        page.textContent = `Page tested: ${json.id}`;
-        websiteTestSection.appendChild(page);
-
-        //get the biggest weights
-        const auditRefs = json.lighthouseResult.categories.performance.auditRefs;
-        var weights = {};
-        Object.entries(auditRefs).forEach(([key, value]) => {
-            if(value.weight > 0) {
-                weights[key] = value;
-            }
-        });
-
-        console.log(weights);
+        pageTested.textContent = `Page tested: ${json.id}`;
 
         const audits = json.lighthouseResult.audits;
         Object.entries(audits).forEach(([key, value]) => {
-            if(key === 'first-contentful-paint') {
-                const FCPnumber = document.getElementById('FCP-number');
-                const FCPcolor = document.getElementById('FCP-color');
-    
-                FCPnumber.textContent = value.displayValue;
-                FCPcolor.className += ` ring-${color(value.score)}`
-                FCPcolor.setAttribute('style', crop(value.score));
-            }
-            if(key === 'first-contentful-paint') {
-                const FCPnumber = document.getElementById('FCP-number');
-                const FCPcolor = document.getElementById('FCP-color');
-    
-                FCPnumber.textContent = value.displayValue;
-                FCPcolor.className += ` ring-${color(value.score)}`
-            }
+            if(key === 'first-contentful-paint') {setMetrics('FCP', value);}
+            if(key === 'interactive') {setMetrics('TTI', value);}
+            if(key === 'speed-index') {setMetrics('SI', value);}
+            if(key === 'total-blocking-time') {setMetrics('TBT', value);}
+            if(key === 'largest-contentful-paint') {setMetrics('LCP', value);}
+            if(key === 'cumulative-layout-shift') {setMetrics('CLS', value);}
         });
-
-        //paragraphs added
-        Object.entries(weights).forEach(([key, value]) => {
-            const p = document.createElement('p');
-            p.textContent = `${audits[value.id].title}: ${audits[value.id].displayValue}`;
-            websiteTestSection.appendChild(p);
-        });
+        document.documentElement.style.setProperty('--ring-opacity', 1);
+        document.documentElement.style.setProperty('--loading-bar-and-label-opacity', 0);
     });
 }
 
@@ -117,7 +113,9 @@ function setUpQuery(url) {
     return query;
 }
 
-function loading() {
+function loading(url) {
+    const label = document.getElementById('testing-page-label');
+    label.textContent = `Testing Page: ${url}`;
     stepValue = 5;
     id = setInterval(frame, 1200);
   
@@ -126,7 +124,7 @@ function loading() {
         clearInterval(id);
       }
       else {
-        var random = Math.random() * (10 - 5) + 5;
+        var random = Math.random() * (5 - 2.5) + 2.5;
         if(stepValue >= 70){
             random = Math.random() * (1.25 - .5) + .5;
         }
@@ -140,10 +138,6 @@ function loading() {
         stepValue = stepValue + random;
       }
     }
-}
-
-function doneLoading() {
-
 }
 
 function color(score) {
@@ -173,13 +167,23 @@ function crop(score) {
     else if(score >= 33.33 && score < 66.66) {
         score = score - 33.33;
         score = score * 3;
-        crop = `clip-path: polygon(50% 51%,101% 101%,0% 101%,0% 0%,0% 0%,${score}% 0%)`
+        crop = `clip-path: polygon(50% 51%,101% 101%,0% 101%,0% 0%,101% 0%,${score}% 0%)`
     }
     else {
         score = score - 66.66;
         score = score * 3;
-        crop = `clip-path: polygon(50% 51%,101% 101%,0% 101%,0% 0%,0% 0%,101% ${score}%)`
+        crop = `clip-path: polygon(50% 51%,101% 101%,0% 101%,0% 0%,101% 0%,101% ${score}%)`
     }
 
     return crop;
+}
+
+function setMetrics(acronym, value) {
+    const numberElem = document.getElementById(`${acronym}-number`);
+    const colorElem = document.getElementById(`${acronym}-color`);
+
+    numberElem.textContent = value.displayValue;
+    colorElem.className += ` ring-${color(value.score)}`;
+    colorElem.setAttribute('style', crop(value.score));
+    console.log(value);
 }

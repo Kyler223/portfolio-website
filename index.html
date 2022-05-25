@@ -189,7 +189,7 @@
                 </label>
                 <br>
                 <p id="website-test-alert" class="highlight-red"></p>
-                <input type="url" 
+                <input type="text" 
                     id="url-test-input" 
                     placeholder="Input your website URL"
                 />
@@ -200,11 +200,13 @@
                     onclick="checkURL()"
                 />
             </form>
-            <p id="loaing-page-testing"></p>
-            <div id="progressbarWrapper">
-                <span id="greenBar"></span>
-            </div>
             <div class="metrics-container">
+                <div class="loading-bar-and-label">
+                    <p id="testing-page-label"></p>
+                    <div id="progressbarWrapper">
+                        <span id="greenBar"></span>
+                    </div>
+                </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
                     <div class="ring ring-color" id="FCP-color"></div>
@@ -216,7 +218,7 @@
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
-                    <div class="ring ring-color"></div>
+                    <div class="ring ring-color" id="TTI-color"></div>
                     <div class="web-test-labels">
                         <div class="web-test-number" id="TTI-number">0</div>
                         <div class="web-test-acronym">TTI</div>
@@ -225,7 +227,7 @@
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
-                    <div class="ring ring-color"></div>
+                    <div class="ring ring-color" id="SI-color"></div>
                     <div class="web-test-labels">
                         <div class="web-test-number" id="SI-number">0</div>
                         <div class="web-test-acronym">SI</div>
@@ -234,7 +236,7 @@
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
-                    <div class="ring ring-color"></div>
+                    <div class="ring ring-color" id="TBT-color"></div>
                     <div class="web-test-labels">
                         <div class="web-test-number" id="TBT-number">0</div>
                         <div class="web-test-acronym">TBT</div>
@@ -243,7 +245,7 @@
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
-                    <div class="ring ring-color"></div>
+                    <div class="ring ring-color" id="LCP-color"></div>
                     <div class="web-test-labels">
                         <div class="web-test-number" id="LCP-number">0</div>
                         <div class="web-test-acronym">LCP</div>
@@ -252,15 +254,17 @@
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
-                    <div class="ring ring-color"></div>
+                    <div class="ring ring-color" id="CLS-color"></div>
                     <div class="web-test-labels">
                         <div class="web-test-number" id="CLS-number">0</div>
                         <div class="web-test-acronym">CLS</div>
                     </div>
                     <div class="web-test-title">Cumulative Layout Shift</div>
                 </div>
+                <!-- overall preformace score -->
             </div>
-            <!-- page-speed-insights.js adds new elements here -->
+            <p id="page-tested"></p>
+            <!-- <p id=""></p> -->
         </section>
             <!-- better Search Engine ranking -->
             <!-- more customers which may mean more money -->
