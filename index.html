@@ -200,8 +200,65 @@
                     onclick="checkURL()"
                 />
             </form>
-            <div class="progressbarWrapper">
+            <p id="loaing-page-testing"></p>
+            <div id="progressbarWrapper">
                 <span id="greenBar"></span>
+            </div>
+            <div class="metrics-container">
+                <div class="ring">
+                    <div class="ring ring-grey"></div>
+                    <div class="ring ring-color" id="FCP-color"></div>
+                    <div class="web-test-labels">
+                        <div class="web-test-number" id="FCP-number">0</div>
+                        <div class="web-test-acronym">FCP</div>
+                    </div>
+                    <div class="web-test-title">First Contentful Paint</div>
+                </div>
+                <div class="ring">
+                    <div class="ring ring-grey"></div>
+                    <div class="ring ring-color"></div>
+                    <div class="web-test-labels">
+                        <div class="web-test-number" id="TTI-number">0</div>
+                        <div class="web-test-acronym">TTI</div>
+                    </div>
+                    <div class="web-test-title">Time to Interactive</div>
+                </div>
+                <div class="ring">
+                    <div class="ring ring-grey"></div>
+                    <div class="ring ring-color"></div>
+                    <div class="web-test-labels">
+                        <div class="web-test-number" id="SI-number">0</div>
+                        <div class="web-test-acronym">SI</div>
+                    </div>
+                    <div class="web-test-title">Speed Index</div>
+                </div>
+                <div class="ring">
+                    <div class="ring ring-grey"></div>
+                    <div class="ring ring-color"></div>
+                    <div class="web-test-labels">
+                        <div class="web-test-number" id="TBT-number">0</div>
+                        <div class="web-test-acronym">TBT</div>
+                    </div>
+                    <div class="web-test-title">Total Blocking Time</div>
+                </div>
+                <div class="ring">
+                    <div class="ring ring-grey"></div>
+                    <div class="ring ring-color"></div>
+                    <div class="web-test-labels">
+                        <div class="web-test-number" id="LCP-number">0</div>
+                        <div class="web-test-acronym">LCP</div>
+                    </div>
+                    <div class="web-test-title">Largest Contentful Paint</div>
+                </div>
+                <div class="ring">
+                    <div class="ring ring-grey"></div>
+                    <div class="ring ring-color"></div>
+                    <div class="web-test-labels">
+                        <div class="web-test-number" id="CLS-number">0</div>
+                        <div class="web-test-acronym">CLS</div>
+                    </div>
+                    <div class="web-test-title">Cumulative Layout Shift</div>
+                </div>
             </div>
             <!-- page-speed-insights.js adds new elements here -->
         </section>

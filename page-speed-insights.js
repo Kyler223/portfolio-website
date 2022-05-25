@@ -75,6 +75,25 @@ function runWebsiteTest() {
         console.log(weights);
 
         const audits = json.lighthouseResult.audits;
+        Object.entries(audits).forEach(([key, value]) => {
+            if(key === 'first-contentful-paint') {
+                const FCPnumber = document.getElementById('FCP-number');
+                const FCPcolor = document.getElementById('FCP-color');
+    
+                FCPnumber.textContent = value.displayValue;
+                FCPcolor.className += ` ring-${color(value.score)}`
+                FCPcolor.setAttribute('style', crop(value.score));
+            }
+            if(key === 'first-contentful-paint') {
+                const FCPnumber = document.getElementById('FCP-number');
+                const FCPcolor = document.getElementById('FCP-color');
+    
+                FCPnumber.textContent = value.displayValue;
+                FCPcolor.className += ` ring-${color(value.score)}`
+            }
+        });
+
+        //paragraphs added
         Object.entries(weights).forEach(([key, value]) => {
             const p = document.createElement('p');
             p.textContent = `${audits[value.id].title}: ${audits[value.id].displayValue}`;
@@ -100,15 +119,67 @@ function setUpQuery(url) {
 
 function loading() {
     stepValue = 5;
-    id = setInterval(frame, 1500);
+    id = setInterval(frame, 1200);
   
     function frame() {
       if (stepValue >= 100) {
         clearInterval(id);
       }
       else {
-        loadingBar.style.width = `${stepValue + 5}%`;
-        stepValue = stepValue + 5;
+        var random = Math.random() * (10 - 5) + 5;
+        if(stepValue >= 70){
+            random = Math.random() * (1.25 - .5) + .5;
+        }
+        if(stepValue >= 85){
+            random = Math.random() * (0.625 - .25) + .25;
+        }
+        if(stepValue >= 95){
+            random = Math.random() * (0.3125 - .125) + .125;
+        }
+        loadingBar.style.width = `${stepValue + random}%`;
+        stepValue = stepValue + random;
       }
     }
+}
+
+function doneLoading() {
+
+}
+
+function color(score) {
+    var color = '';
+    if(score >= .85) {
+        color = 'green';
+    }
+    else if(score < .85 && score > .4) {
+        color = 'yellow'
+    }
+    else {
+        color = 'red'
+    }
+
+    return color
+}
+
+function crop(score) {
+    var crop = '';
+    score = score * 100;
+    if(score < 33.33) {
+        score = score * 3;
+        score = score - 100;
+        score = score * -1;
+        crop = `clip-path: polygon(50% 51%,101% 101%,0% 101%,0% 0%,0% 0%,0% ${score}%)`
+    }
+    else if(score >= 33.33 && score < 66.66) {
+        score = score - 33.33;
+        score = score * 3;
+        crop = `clip-path: polygon(50% 51%,101% 101%,0% 101%,0% 0%,0% 0%,${score}% 0%)`
+    }
+    else {
+        score = score - 66.66;
+        score = score * 3;
+        crop = `clip-path: polygon(50% 51%,101% 101%,0% 101%,0% 0%,0% 0%,101% ${score}%)`
+    }
+
+    return crop;
 }
