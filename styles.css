@@ -662,16 +662,3 @@ footer {
     font-size: 1.3rem;
     margin: auto 10px;
 }
-
-/* reveal animation */
-/* .reveal {
-    position: relative;
-    transform: translateY(90px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-  
-.reveal.active {
-    transform: translateY(0);
-    opacity: 1;
-} */
