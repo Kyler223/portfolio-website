@@ -44,9 +44,12 @@
         rel="manifest">
     <!-- javascript -->
     <script>
+        //after window loads
         window.addEventListener("load", function(){
             var scriptSrcs = 
-            ["iframe-scroller.js", "hamburgerClick.js", "reveal.js", "page-speed-insights.js","contact-script.js"];
+            ["iframe-scroller.js", "hamburgerClick.js", 
+            "reveal.js", "page-speed-insights.js", 
+            "contact-script.js", "lazy-load.js"];
             for (var i = 0; i < scriptSrcs.length; i++) {
                 var element = document.createElement("script");
                 element.src = scriptSrcs[i];
@@ -165,14 +168,14 @@
             </div>
             <div class="percent-quote">
                 <h3>"53%</h3>
-                <img src="/images/red-down-arrow.svg"
+                <img lazy="/images/red-down-arrow.svg"
                     width="20px" height="20px" />
                 <p>of people will leave a mobile site if it takes more than three seconds to load" - Google</p>
             </div>
             <div class="percent-quote">
                 <p>“mobile pages that loaded one second faster saw up to </p>
                 <h3>27%</h3>
-                <img src="/images/green-up-arrow.svg"
+                <img lazy="/images/green-up-arrow.svg"
                     width="20px" height="20px" />
                 <p> increase in conversion rates" - Google</p>
             </div>
@@ -316,14 +319,14 @@
                             class="h3-certification">
                             HTML
                         </h3>
-                        <img src="images/html.webp"
+                        <img lazy="images/html.webp"
                              title="Click here for the real HTML certificate" 
                              width="20.4%" height="15.504%" 
                              loading="lazy" 
                              alt="Learn HTML certificate" 
                              class="img-certification"
-                             srcset="images/html-small.webp 250w"
-                        />
+                             srcset-lazy="images/html-small.webp 250w"
+                             />
                     </div>
                 </a>
                 <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" 
@@ -333,14 +336,14 @@
                             class="h3-certification">
                             CSS
                         </h3>
-                        <img src="images/css.webp"
+                        <img lazy="images/css.webp"
                              title="Click here for the real CSS certificate" 
                              width="20.4%" height="15.504%" 
                              loading="lazy" 
                              alt="Learn CSS certificate" 
                              class="img-certification"
-                             srcset="images/css-small.webp 250w"
-                        />
+                             srcset-lazy="images/css-small.webp 250w"
+                             />
                     </div>
                 </a>
                 <a href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e" 
@@ -348,14 +351,14 @@
                     <div>
                         <h3 title="Click here for the real Javascript certificate" 
                             class="h3-certification">Javascript</h3>
-                        <img src="images/javascript.webp"
+                        <img lazy="images/javascript.webp"
                              title="Click here for the real Javascript certificate" 
                              width="20.4%" height="15.504%" 
                              loading="lazy" 
                              alt="Learn Javascript certificate" 
                              class="img-certification" 
-                             srcset="images/javascript-small.webp 250w"
-                        />
+                             srcset-lazy="images/javascript-small.webp 250w"
+                             />
                     </div>
                 </a>
                 <a href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b"
@@ -365,13 +368,13 @@
                             class="h3-certification">
                             React
                         </h3>
-                        <img src="images/react.webp" 
+                        <img lazy="images/react.webp" 
                              title="Click here for the real React certificate" 
                              width="20.4%" width="15.504%" 
                              loading="lazy" alt="Learn React certificate" 
                              class="img-certification"
-                             srcset="images/react-small.webp 250w"
-                        />
+                             srcset-lazy="images/react-small.webp 250w"
+                             />
                     </div>
                 </a>
             </div>
@@ -393,31 +396,31 @@
                         Caroline I.
                     </h3>
                     <div class="flex-break"></div>
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
@@ -442,31 +445,31 @@
                         Abigail H.
                     </h3>
                     <div class="flex-break"></div>
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
                         loading="lazy"
                     />
-                    <img src="/images/star.svg" 
+                    <img lazy="/images/star.svg" 
                         alt="Star Icon" 
                         class="star" 
                         width="16px" height="16px" 
@@ -504,7 +507,7 @@
                 </a>
                 <div class="group">
                     <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                        <img src="/images/plain-white-logo.webp"
+                        <img lazy="/images/plain-white-logo.webp"
                              class="iframe-icon" 
                              width="50px" height="50px" 
                              loading="lazy" 
@@ -512,7 +515,7 @@
                         />
                         <div class="iframe-cover"></div>
                     </a>
-                    <iframe src="/HighKey-LowKey/index.html"
+                    <iframe lazy="/HighKey-LowKey/index.html"
                             class="iframe-my-work" 
                             title="HighKey LowKey website" 
                             loading="lazy"  
@@ -535,7 +538,7 @@
                 </a>
                 <div class="group">
                     <a href="https://kylernelson.dev/investment-calculator" target="_blank">
-                        <img src="images/chart-line.webp" 
+                        <img lazy="images/chart-line.webp" 
                              class="iframe-icon" 
                              alt="investment calculator logo" 
                              width="50px" height="50px" 
@@ -543,7 +546,7 @@
                         />
                         <div class="iframe-cover"></div>
                     </a>
-                    <iframe src="/investment-calculator/index.html" 
+                    <iframe lazy="/investment-calculator/index.html" 
                             class="iframe-my-work" 
                             title="investment calculator website" 
                             loading="lazy" 
@@ -560,12 +563,12 @@
                     About Me
                 </h2>
                 <div class="img-text-container">
-                    <img src="/images/pfp.webp" 
+                    <img lazy="/images/pfp.webp" 
                          class="pic-about-me" 
                          width="30%" 
                          loading="lazy" 
                          alt="Picture of Kyler Nelson"
-                         srcset="/images/pfp-medium.webp 1056w,
+                         srcset-lazy="/images/pfp-medium.webp 1056w,
                             /images/pfp-small.webp 704w,
                             /images/pfp-smaller.webp 528w,"
                     />
@@ -654,12 +657,12 @@
                         My goal is to have a remote job / freelance full time in web development in the near future.
                     </p>
                 </div>
-                <img src="/images/code.webp" 
+                <img lazy="/images/code.webp" 
                      class="pic-about-me" 
                      width="30%" 
                      loading="lazy" 
                      alt="Screenshot of JavaScript" 
-                     srcset="/images/code-medium.webp 600w,
+                     srcset-lazy="/images/code-medium.webp 600w,
                         /images/code-small.webp 400w"
                 />
             </div>
@@ -700,7 +703,7 @@
                     />
                     <button type="submit" class="submit-form-button" id="send">
                         Send
-                        <img src="/images/paper-plane-top.svg" 
+                        <img lazy="/images/paper-plane-top.svg" 
                              id="send-icon" 
                              alt="Send Icon" 
                              loading="lazy"
@@ -718,7 +721,7 @@
             </h2>
             <a href="https://github.com/Kyler223" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img src="/images/github-square.svg" 
+                    <img lazy="/images/github-square.svg" 
                          alt="Github Icon" 
                          class="icon" 
                          width="22px" height="22px" 
@@ -731,7 +734,7 @@
             </a>
             <a href="https://medium.com/@KylerNelson" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img src="/images/medium.svg" 
+                    <img lazy="/images/medium.svg" 
                          alt="Medium Icon" 
                          class="icon" 
                          width="22px" height="22px" loading="lazy"
