@@ -1,20 +1,7 @@
-/* fonts */
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-ExtraBold";
-    src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") format("opentype");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-Bold";
-    src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
-}
-
 :root {
     --blue-accent: rgb(0, 162, 197);
     --blue-accent-darker: rgb(0, 128, 156);
-    --red-accent: #eb1111;
+    /* --red-accent: #eb1111; */
     --grey: rgb(100, 100, 100);
     --green: #00E657;
     --yellow: #FF9E00;
@@ -24,80 +11,10 @@
     --common-border-radius: 10px;
     --contact-padding: 12px;
     --contact-border-radius: 5px;
-    --section-top-bottom-margin: 170px;
+    /* --section-top-bottom-margin: 170px; */
     --metrics-display: none;
     --loading-bar-and-label-opacity: 1;
     --ring-opacity: .4;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat-Bold', Roboto, Arial;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 7px 10%;
-    background-color: rgba(25, 25, 25, 1);
-    color: white;
-    font-weight: 700;
-}
-
-#logo {
-    width: 80%;
-    height: 80%;
-    max-width: 280px;
-    display: inline-block;
-    padding: 5px;
-    cursor: pointer;
-    margin: auto 0;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: block;
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    font-size: 1.2rem;
-    padding: 0 25px;
-    cursor: pointer;
-}
-
-.hamburger {
-    width: 35px;
-    height: 35px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#contact {
-    width: 130px;
-    height: 40px;
-    margin: 0 75px;
-    background-color: #5FE3D8;
-    border: none;
-    border-radius: var(--common-border-radius);
-    font-family: 'Montserrat-Bold', Roboto, Arial;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 50ms ease-out;
-}
-
-#contactDropdown {
-    display: none;
 }
 
 /* boilerplate code */
@@ -113,9 +30,6 @@ a {
 .flex-break {
     flex-basis: 100%;
 }
-.bold {
-    font-family: 'Montserrat-ExtraBold', Roboto, Arial;
-}
 .section-margin {
     margin: var(--section-top-bottom-margin) auto;
 }
@@ -129,115 +43,6 @@ a {
     margin: 35px auto;
 }
 
-/* phones */
-@media screen and (max-width: 1450px){
-    html {
-        font-size: 18px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .navLinksDropdown {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        padding: 0;
-    }
-    
-    .navItemDropdown {      
-        border: none;
-        line-height: 60px;
-        width: 85%;
-        margin: 0 auto;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .hamburger {
-        display: inherit;
-    }
-
-    .hamburger-center {
-        margin: 0 auto;
-    }
-
-    #contact {
-        display: none;
-    }
-
-    #contactDropdown {
-        display: inherit;
-        background-color: rgba(95, 227, 216, .85);
-    }
-
-    #logo {
-        max-width: 380px;
-    }
-}
-
-/* phones / smaller logo */
-@media screen and (max-width: 700px){
-    #logo {
-        width: 50vw;
-    }
-}
-
-/* desktop */
-@media screen and (min-width: 1450px){
-    html {
-        font-size: 16px;
-    }
-    
-    .hamburger {
-        display: none;
-    }
-
-    .nav-links {
-        display: block !important;
-    }
-
-    #contact{
-        display: block !important;
-    }
-}
-
-/* home-styles */
-#banner-container {
-    display: flex;
-    gap: 2.5vw;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 75vh;
-    margin: 5vh 0;
-}
-
-#header {
-    font-size: 3.5rem;
-    margin-left: 5vw;
-    max-width: 65vw;
-    padding: 10px 40px;
-}
-
-#bannerIframe {
-    flex-grow: 2;
-    width: 170%;
-    max-width: 1100px;
-    height: 100%;
-    margin-right: 5vw;
-    border: none;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-}
-
-.second-header {
-    text-align: center;
-    font-size: 2.5rem;
-    width: var(--common-width);
-    margin: 20px auto;
-}
 /* why you need a fast website */
 .percent-quote {
     width: 65vw;
@@ -859,7 +664,7 @@ footer {
 }
 
 /* reveal animation */
-.reveal {
+/* .reveal {
     position: relative;
     transform: translateY(90px);
     opacity: 0;
@@ -869,4 +674,4 @@ footer {
 .reveal.active {
     transform: translateY(0);
     opacity: 1;
-}
+} */
