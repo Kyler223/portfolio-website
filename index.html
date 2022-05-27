@@ -56,16 +56,49 @@
                 element.type = "text/css";
                 document.body.appendChild(element);
             }
-            var scriptSrcs = 
-            ["iframe-scroller.js", "hamburgerClick.js", 
-            "reveal.js", "page-speed-insights.js", 
-            "contact-script.js", "lazy-load.js"];
+            var scriptSrcs = [
+                "iframe-scroller.js", "hamburgerClick.js", 
+                "reveal.js", "lazy-load.js"];
             for (var i = 0; i < scriptSrcs.length; i++) {
                 var element = document.createElement("script");
                 element.src = scriptSrcs[i];
                 element.type = "text/javascript";
                 document.body.appendChild(element);
             }
+            var intersectionScripts = [
+                "page-speed-insights.js",
+                "contact-script.js"];
+            var intersectionObjects = [
+                document.getElementById("website-test-section"),
+                document.getElementById("contact-me")];
+
+            const load = target => {
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        const obj = entry.target;
+                        var element = document.createElement("script");
+                        element.type = "text/javascript";
+
+                        if(obj === document.getElementById("website-test-section")) {
+                            element.src = "page-speed-insights.js";
+                        }
+                        if(obj === document.getElementById("contact-me")) {
+                            element.src = "contact-script.js";
+                        }
+
+                        console.log(`Loaded: ${element.src}`);
+                        document.body.appendChild(element);
+                        observer.disconnect();
+                    }
+                    });
+                });
+
+                io.observe(target);
+            };
+
+            intersectionObjects.forEach(load);
         });
     </script>
     <noscript>
@@ -129,6 +162,9 @@
         #contactDropdown {
             display: none;
         }
+        #bannerIframe {
+            height: 65vh !important;
+        }
         /* phones */
         @media screen and (max-width: 1450px){
             html {
@@ -176,6 +212,10 @@
             #logo {
                 max-width: 380px;
             }
+
+            #bannerIframe {
+                margin-right: 5vw;
+            }
         }
 
         /* phones / smaller logo */
@@ -201,6 +241,9 @@
 
             #contact{
                 display: block !important;
+            }
+            #bannerIframe {
+                margin-right: 5vw;
             }
         }
         .section-margin {
@@ -313,7 +356,6 @@
                     style="flex-grow: 2;
                         width: 170%;
                         max-width: 1100px;
-                        margin-right: 5vw;
                         border: none;
                         box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);"
                     onmouseenter="iframeMouseEnter()" 
