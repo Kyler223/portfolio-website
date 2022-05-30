@@ -1,3 +1,15 @@
+@font-face {
+    font-display: optional;
+    font-family: "Montserrat-ExtraBold";
+    src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") 
+        format("opentype");
+}
+@font-face {
+    font-display: optional;
+    font-family: "Montserrat-Bold";
+    src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
+}
+
 :root {
     --blue-accent: rgb(0, 162, 197);
     --blue-accent-darker: rgb(0, 128, 156);
@@ -477,7 +489,6 @@ h2 {
 }
 
 /* about-me-styles */
-
 .about-me-container {
     margin: var(--section-top-bottom-margin) auto;
 }
