@@ -59,6 +59,17 @@
     display: inline;
     margin: 4px;
 }
+
+/* phones */
+@media screen and (max-width: 900px){
+    .percent-quote h3 {
+        font-size: 32.3px;
+    }
+    .percent-quote p {
+        font-size: 15.3px;
+    }
+}
+
 /* Test Your Website Performance */
 .PageSpeed-API-Form {
     width: var(--common-width);
@@ -70,6 +81,7 @@
 }
 
 #url-test-input {
+    min-width: 200px;
     width: 50%;
     text-align: center;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, .3);
@@ -343,64 +355,14 @@
 
 /* phones */
 @media screen and (max-width: 1100px){
-    #banner-container {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .header {
-        font-size: 2rem;
-    }
-
     .certificationsDiv-container {
         padding-top: var(--section-top-bottom-margin);
-    }
-    
-    #bannerIframe {
-        height: 60vh;
-        margin: 0 17.5vw;
     }
 }
 
 @media screen and (max-width: 330px){
     .certificationsDiv-container {
         padding-top: 110px;
-    }
-}
-
-/* phones */
-@media screen and (max-width: 600px){
-    html {
-        font-size: 12px !important;
-    }
-}
-
-@media screen and (min-width: 600px){
-    html {
-        font-size: 13px !important;
-    }
-}
-
-@media screen and (min-width: 700px){
-    html {
-        font-size: 14px !important;
-    }
-}
-@media screen and (min-width: 950px){
-    html {
-        font-size: 14px !important;
-    }
-}
-@media screen and (min-width: 1050px){
-    html {
-        font-size: 15px !important;
-    }
-}
-
-/* desktop */
-@media screen and (min-width: 1450px){
-    html {
-        font-size: 16px !important;
     }
 }
 
@@ -606,12 +568,6 @@ input, textarea {
     max-width: 500px;
     width: 40vw;
     min-width: 150px;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Montserrat-Medium";
-    src: url("/fonts/montserrat/Montserrat-Medium.otf") format("opentype");
 }
 
 #send-icon {

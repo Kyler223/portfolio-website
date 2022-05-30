@@ -57,8 +57,10 @@
                 document.body.appendChild(element);
             }
             var scriptSrcs = [
-                "iframe-scroller.js", "hamburgerClick.js", 
-                "reveal.js", "lazy-load.js"];
+                "hamburgerClick.js", 
+                "reveal.js", 
+                "lazy-load.js",
+                "iframe-scroller.js"];
             for (var i = 0; i < scriptSrcs.length; i++) {
                 var element = document.createElement("script");
                 element.src = scriptSrcs[i];
@@ -110,13 +112,13 @@
     </noscript>
     <style>
         @font-face {
-            font-display: swap;
+            font-display: optional;
             font-family: "Montserrat-ExtraBold";
             src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") 
                 format("opentype");
         }
         @font-face {
-            font-display: swap;
+            font-display: optional;
             font-family: "Montserrat-Bold";
             src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
         }
@@ -125,7 +127,7 @@
             --section-top-bottom-margin: 170px;
         }
         .bold {
-            font-family: 'Montserrat-ExtraBold', Roboto, Arial;
+            font-family: 'Montserrat-ExtraBold', Roboto, Verdana;
         }
         a {
             color: inherit;
@@ -153,7 +155,7 @@
             background-color: #5FE3D8;
             border: none;
             border-radius: var(--common-border-radius);
-            font-family: 'Montserrat-Bold', Roboto, Arial;
+            font-family: 'Montserrat-Bold', Roboto, Verdana;
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
@@ -163,7 +165,7 @@
             display: none;
         }
         #bannerIframe {
-            height: 65vh !important;
+            height: 70vh;
         }
         /* phones */
         @media screen and (max-width: 1450px){
@@ -242,8 +244,15 @@
             #contact{
                 display: block !important;
             }
+
             #bannerIframe {
                 margin-right: 5vw;
+                max-width: 60vw !important;
+                /* height: 70vh; */
+            }
+
+            .header {
+                font-size: 3.5rem;
             }
         }
         .section-margin {
@@ -266,6 +275,58 @@
         .reveal.active {
             transform: translateY(0);
             opacity: 1;
+        }
+
+        /* phones */
+        @media screen and (max-width: 600px){
+            html {
+                font-size: 12px !important;
+            }
+        }
+
+        @media screen and (min-width: 600px){
+            html {
+                font-size: 13px !important;
+            }
+        }
+
+        @media screen and (min-width: 700px){
+            html {
+                font-size: 14px !important;
+            }
+        }
+        @media screen and (min-width: 950px){
+            html {
+                font-size: 14px !important;
+            }
+        }
+        @media screen and (min-width: 1050px){
+            html {
+                font-size: 15px !important;
+            }
+        }
+
+        /* desktop */
+        @media screen and (min-width: 1450px){
+            html {
+                font-size: 16px !important;
+            }
+        }
+
+        /* phones */
+        @media screen and (max-width: 1100px){
+            #banner-container {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .header {
+                font-size: 2rem;
+            }
+
+            #bannerIframe {
+                margin: 0 17.5vw;
+            }
         }
     </style>
 </head>
@@ -332,16 +393,18 @@
                 gap: 2.5vw;
                 justify-content: space-evenly;
                 align-items: center;
-                margin: 5vh 0;
+                margin-bottom: 20vh;
                 height: 75vh;" 
              width="100%" 
              height="75%">
             <h1 id="header" 
-                style="font-size:3rem;
-                    font-weight:700;
-                    margin-left: 5vw;
+                style="font-size: 3rem;
+                    font-weight: 700;
+                    margin: 0 auto;
                     max-width: 65vw;
-                    padding: 10px 40px;"
+                    padding: 60px 50px;
+                    min-height: 10vh;
+                    width: 400px;"
                 class="bold">
                 Do you have a 
                 <span style="color: var(--red-accent);">
@@ -354,8 +417,6 @@
                     height="700px" loading="eager" 
                     id="bannerIframe"
                     style="flex-grow: 2;
-                        width: 170%;
-                        max-width: 1100px;
                         border: none;
                         box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);"
                     onmouseenter="iframeMouseEnter()" 
