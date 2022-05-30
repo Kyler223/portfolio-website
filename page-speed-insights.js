@@ -60,7 +60,12 @@ function runWebsiteTest() {
     console.log('Running: runWebsiteTest()');
     websiteTestAlert.textContent = '';
     const pageTested = document.getElementById('page-tested');
+    const platformTested = document.getElementById('platform-tested');
+    const environmentTested = document.getElementById('environment-tested');
+
     pageTested.textContent = '';
+    platformTested.textContent = '';
+    environmentTested.textContent = '';
 
     document.documentElement.style.setProperty('--metrics-display', 'block');
     document.documentElement.style.setProperty('--ring-opacity', .4);
@@ -82,7 +87,11 @@ function runWebsiteTest() {
         stepValue = 100;
         clearInterval(id); 
         console.log(json);
+
         pageTested.textContent = `Page tested: ${json.id}`;
+        platformTested.textContent = `Platform: ${json.lighthouseResult.configSettings.formFactor}`;
+        environmentTested.textContent = `Environment: ${json.lighthouseResult.environment.networkUserAgent}`;
+        
 
         const audits = json.lighthouseResult.audits;
         Object.entries(audits).forEach(([key, value]) => {
@@ -181,9 +190,11 @@ function crop(score) {
 function setMetrics(acronym, value) {
     const numberElem = document.getElementById(`${acronym}-number`);
     const colorElem = document.getElementById(`${acronym}-color`);
+    const scoreElem = document.getElementById(`${acronym}-score`);
 
     numberElem.textContent = value.displayValue;
     colorElem.className += ` ring-${color(value.score)}`;
     colorElem.setAttribute('style', crop(value.score));
+    scoreElem.textContent = `Score: ${value.score * 100}`;
     console.log(value);
 }

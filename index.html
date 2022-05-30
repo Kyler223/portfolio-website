@@ -248,7 +248,6 @@
             #bannerIframe {
                 margin-right: 5vw;
                 max-width: 60vw !important;
-                /* height: 70vh; */
             }
 
             .header {
@@ -360,9 +359,14 @@
                         Home
                     </li>
                 </a>
-                <a href="#my-work" title="My Work">
+                <a href="#website-test" title="My Work">
                     <li class="nav-item border-right">
-                        My Work
+                        Test Website
+                    </li>
+                </a>
+                <a href="#Packages" title="My Work">
+                    <li class="nav-item border-right">
+                        Packages
                     </li>
                 </a>
                 <a href="#about-me" title="About Me">
@@ -393,7 +397,7 @@
                 gap: 2.5vw;
                 justify-content: space-evenly;
                 align-items: center;
-                margin-bottom: 20vh;
+                margin-bottom: 300px;
                 height: 75vh;" 
              width="100%" 
              height="75%">
@@ -452,6 +456,7 @@
                     alt="green up arrow"/>
                 <p> increase in conversion rates" - Google</p>
             </div>
+            <div id="website-test"></div>
         </section>
         <!-- how fast is your website? -->
         <section class="section-margin reveal" id="website-test-section">
@@ -491,6 +496,7 @@
                         <div class="web-test-acronym">FCP</div>
                     </div>
                     <div class="web-test-title">First Contentful Paint</div>
+                    <div class="score" id="FCP-score">Score: </div>
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
@@ -500,6 +506,7 @@
                         <div class="web-test-acronym">TTI</div>
                     </div>
                     <div class="web-test-title">Time to Interactive</div>
+                    <div class="score" id="TTI-score">Score: </div>
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
@@ -509,6 +516,7 @@
                         <div class="web-test-acronym">SI</div>
                     </div>
                     <div class="web-test-title">Speed Index</div>
+                    <div class="score" id="SI-score">Score: </div>
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
@@ -518,6 +526,7 @@
                         <div class="web-test-acronym">TBT</div>
                     </div>
                     <div class="web-test-title">Total Blocking Time</div>
+                    <div class="score" id="TBT-score">Score: </div>
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
@@ -527,6 +536,7 @@
                         <div class="web-test-acronym">LCP</div>
                     </div>
                     <div class="web-test-title">Largest Contentful Paint</div>
+                    <div class="score" id="LCP-score">Score: </div>
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
@@ -536,50 +546,52 @@
                         <div class="web-test-acronym">CLS</div>
                     </div>
                     <div class="web-test-title">Cumulative Layout Shift</div>
+                    <div class="score" id="CLS-score">Score: </div>
                 </div>
                 <!-- overall preformace score -->
             </div>
-            <p id="page-tested"></p>
-            <!-- <p id=""></p> -->
+            <p id="page-tested" class="test-description"></p>
+            <p id="platform-tested" class="test-description"></p>
+            <p id="environment-tested" class="test-description"></p>
+            <div id="Packages"></div>
         </section>
             <!-- better Search Engine ranking -->
             <!-- more customers which may mean more money -->
             <!-- better customer experience -->
         <!-- what I can do for you -->
         <!-- packages -->
-        <section class="package-container section-margin reveal">
+        <section class="section-margin reveal">
             <h2 class="second-header bold">
             Packages
             </h2>
-            <!-- <div class="line-break"></div> -->
-            <div class="package">
-                <div class="package-header"
-                    style="background-color: #00D0FF;">
-                    Basic
+            <div class="line-break"></div>
+            <div class="package-container">
+                <div class="package">
+                    <div class="package-header"
+                        style="background-color: #00D0FF;">
+                        <h3>Basic</h3>
+                        <p>$35 per page</p>
+                    </div>
+                    <p class="package-item">Average 5 second load time or less*</p>
+                    <p class="package-item">Compress / convert every image into next-gen formats</p>
+                    <p class="package-item">Defer unused JavaScript and CSS to prevent render blocking</p>
+                    <p class="package-item">Configure Cloudflare for your website</p>
+                    <p class="package-item">Lazy load images and iframes that are below the fold</p>
                 </div>
-                <ul>
-                    <li>Average 5 second load time or less (based off web.dev mobile speed “Time to Interactive”)</li>
-                    <br>
-                    <li>Compress / convert every image into next-gen formats</li>
-                    <br>
-                    <li>Defer unused JavaScript and CSS to prevent render blocking</li>
-                </ul>
-            </div>
-            <div class="package">
-                <div class="package-header"
-                    style="background-color: #0CE8D5;">
-                    Pro
+                <div class="package">
+                    <div class="package-header"
+                        style="background-color: #0CE8D5;">
+                        <h3>Pro</h3>
+                        <p>$100 per page</p>
+                    </div>
+                    <p class="package-item">Average 3.5 second load time or less*</p>
+                    <p class="package-item">Everything in Basic package</p>
+                    <p class="package-item">Hand pick assets to load first that are above the fold</p>
+                    <p class="package-item">Fix SEO issues</p>
+                    <p class="package-item">Create 2 smaller versions for every image to display on smaller devices</p>
                 </div>
-                <ul>
-                    <li>Everything in Pro package</li>
-                    <br>
-                    <li>Average 3 second load time or less (based off web.dev mobile speed “Time to Interactive”)</li>
-                    <br>
-                    <li>Create 2 smaller versions for every image to display on smaller devices</li>
-                    <br>
-                    <li>Hand pick assets above the fold to load first</li>
-                </ul>
             </div>
+            <p id="package-description">*based off https://web.dev/measure/ mobile speed “Time to Interactive”</p>
             <!-- <div class="package">
                 <div class="package-header"
                     style="background-color: #0DFFA6;">
@@ -588,8 +600,7 @@
             </div> -->
         </section>
         <!-- certifications -->
-        <section class="certificationsDiv-container reveal"
-            style="margin: 180px auto;">
+        <section class="certificationsDiv-container reveal">
             <a href="https://www.codecademy.com/profiles/kylernelson" target="_blank">
                 <h2 title="Click here to see all my Codecademy certificates" 
                     class="second-header bold">
@@ -774,72 +785,6 @@
                     </p>
                 </div>
             </div>
-        </section>
-        <!-- my work -->
-        <section class="my-work"
-            style="margin: 180px auto;">
-            <section class="reveal" id="my-work">
-                <h2 class="second-header bold">My Work</h2>
-                <div class="line-break"></div>
-                <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                    <h3 class="bold my-work-h3">
-                        HighKey | LowKey
-                    </h3>
-                </a>
-                <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                    <p class="description">
-                        A template for a fashion website.
-                    </p>
-                </a>
-                <div class="group">
-                    <a href="https://kylernelson.dev/HighKey-LowKey" target="_blank">
-                        <img lazy="/images/plain-white-logo.webp"
-                             class="iframe-icon" 
-                             width="50px" height="50px" 
-                             loading="lazy" 
-                             alt="HighKey LowKey white logo" 
-                        />
-                        <div class="iframe-cover"></div>
-                    </a>
-                    <iframe lazy="/HighKey-LowKey/index.html"
-                            class="iframe-my-work" 
-                            title="HighKey LowKey website" 
-                            loading="lazy"  
-                            scrolling="no">
-                    </iframe>
-                </div>
-            </section>
-            <section class="reveal investment-iframe">
-                <a href="https://kylernelson.dev/investment-calculator" 
-                    target="_blank">
-                    <h3 class="bold my-work-h3">
-                        Investment Calculator
-                    </h3>
-                </a>
-                <a href="https://kylernelson.dev/investment-calculator" 
-                    target="_blank">
-                    <p class="description">
-                        A simple calculator to see future returns on investments.
-                    </p>
-                </a>
-                <div class="group">
-                    <a href="https://kylernelson.dev/investment-calculator" target="_blank">
-                        <img lazy="images/chart-line.webp" 
-                             class="iframe-icon" 
-                             alt="investment calculator logo" 
-                             width="50px" height="50px" 
-                             loading="lazy"
-                        />
-                        <div class="iframe-cover"></div>
-                    </a>
-                    <iframe lazy="/investment-calculator/index.html" 
-                            class="iframe-my-work" 
-                            title="investment calculator website" 
-                            loading="lazy" 
-                            scrolling="no">
-                    </iframe>
-                </div>
-            </section>
         </section>
         <!-- about me -->
         <section class="about-me-container"
