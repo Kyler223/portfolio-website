@@ -2,6 +2,7 @@ const websiteTestSection = document.getElementById('website-test-section');
 const websiteTestAlert = document.getElementById('website-test-alert');
 const urlTestInput = document.getElementById('url-test-input');
 const form = document.getElementById("PageSpeed-API-Form");
+const label = document.getElementById('testing-page-label');
 
 //loading bar
 const loadingBar = document.getElementById("greenBar");
@@ -37,21 +38,6 @@ function checkURL() {
 
     if(!error) {
         runWebsiteTest();
-        //not working fetch
-        //
-        // fetch(UsersURL)
-        // .then(response => {
-        //   console.log('response.status: ', response.status);
-        //   if(response.ok){
-        //       runWebsiteTest();
-        //   }
-        //   else {
-        //     websiteTestAlert.textContent = `Could not reach URL (Error Code ${response.status})`;
-        //   }
-        // })
-        // .catch(err => {
-        //   console.log(err);
-        // });
     }
 
 }
@@ -70,40 +56,50 @@ function runWebsiteTest() {
     document.documentElement.style.setProperty('--metrics-display', 'block');
     document.documentElement.style.setProperty('--ring-opacity', .4);
     document.documentElement.style.setProperty('--loading-bar-and-label-opacity', 1);
+    document.documentElement.style.setProperty('--green-bar-color', '#0DFFA6');
 
     //request json from api
     var UsersURL = urlTestInput.value;
     loading(UsersURL);
-    if(!UsersURL.startsWith("https://") || !UsersURL.startsWith("http://")) {
+    if(!UsersURL.startsWith("https://") && !UsersURL.startsWith("http://")) {
         UsersURL = "http://" + UsersURL;
     }
     const url = setUpQuery(UsersURL);
     fetch(url)
         .then(response => response.json())
         .then(json => {
-        
-        //done loading
+            
         loadingBar.style.width = `100%`;
-        stepValue = 100;
-        clearInterval(id); 
-        console.log(json);
 
-        pageTested.textContent = `Page tested: ${json.id}`;
-        platformTested.textContent = `Platform: ${json.lighthouseResult.configSettings.formFactor}`;
-        environmentTested.textContent = `Environment: ${json.lighthouseResult.environment.networkUserAgent}`;
-        
-
-        const audits = json.lighthouseResult.audits;
-        Object.entries(audits).forEach(([key, value]) => {
-            if(key === 'first-contentful-paint') {setMetrics('FCP', value);}
-            if(key === 'interactive') {setMetrics('TTI', value);}
-            if(key === 'speed-index') {setMetrics('SI', value);}
-            if(key === 'total-blocking-time') {setMetrics('TBT', value);}
-            if(key === 'largest-contentful-paint') {setMetrics('LCP', value);}
-            if(key === 'cumulative-layout-shift') {setMetrics('CLS', value);}
-        });
-        document.documentElement.style.setProperty('--ring-opacity', 1);
-        document.documentElement.style.setProperty('--loading-bar-and-label-opacity', 0);
+        if(json.id) {
+            //done loading
+            stepValue = 100;
+            clearInterval(id); 
+            console.log(json);
+    
+            pageTested.textContent = `Page tested: ${json.id}`;
+            platformTested.textContent = `Platform: ${json.lighthouseResult.configSettings.formFactor}`;
+            environmentTested.textContent = `Environment: ${json.lighthouseResult.environment.networkUserAgent}`;
+            
+    
+            const audits = json.lighthouseResult.audits;
+            Object.entries(audits).forEach(([key, value]) => {
+                if(key === 'first-contentful-paint') {setMetrics('FCP', value);}
+                if(key === 'interactive') {setMetrics('TTI', value);}
+                if(key === 'speed-index') {setMetrics('SI', value);}
+                if(key === 'total-blocking-time') {setMetrics('TBT', value);}
+                if(key === 'largest-contentful-paint') {setMetrics('LCP', value);}
+                if(key === 'cumulative-layout-shift') {setMetrics('CLS', value);}
+            });
+            document.documentElement.style.setProperty('--ring-opacity', 1);
+            document.documentElement.style.setProperty('--loading-bar-and-label-opacity', 0);
+        }
+        else {
+            stepValue = 100;
+            clearInterval(id);
+            label.textContent = `ERROR could not reach: ${UsersURL}`;
+            document.documentElement.style.setProperty('--green-bar-color', '#FF0D00');
+        }
     });
 }
 
@@ -123,7 +119,6 @@ function setUpQuery(url) {
 }
 
 function loading(url) {
-    const label = document.getElementById('testing-page-label');
     label.textContent = `Testing Page: ${url}`;
     stepValue = 5;
     id = setInterval(frame, 1200);
