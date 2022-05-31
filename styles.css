@@ -1,18 +1,8 @@
-@font-face {
-    font-display: optional;
-    font-family: "Montserrat-ExtraBold";
-    src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") 
-        format("opentype");
-}
-@font-face {
-    font-display: optional;
-    font-family: "Montserrat-Bold";
-    src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
-}
-
 :root {
     --blue-accent: rgb(0, 162, 197);
     --blue-accent-darker: rgb(0, 128, 156);
+    --bold: 'Montserrat-ExtraBold-optimized', 'Montserrat-ExtraBold', Verdana;
+    --regular: 'Montserrat-Bold-optimized', 'Montserrat-Bold', Verdana;
     /* --red-accent: #eb1111; */
     --grey: rgb(100, 100, 100);
     --green: #00E657;
@@ -97,7 +87,7 @@
     width: 50%;
     text-align: center;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, .3);
-    font-family: 'Montserrat-Bold', Roboto, Arial;
+    font-family: var(--regular);
 }
 
 #web-test-alert {
@@ -111,7 +101,7 @@
     background-color: #00D0FF;
     padding: 11px;
     font-size: 1.3rem;
-    font-family: 'Montserrat-Bold', Roboto, Arial;
+    font-family: var(--regular);
     font-weight: 100;
     border: 1px solid rgba(0, 0, 0, 0.4);
     margin-left: 5px;

@@ -22,11 +22,11 @@
         rel="preload"
         as="image">
     <!-- fonts -->
-    <link href="/fonts/montserrat/Montserrat-ExtraBold.otf" 
+    <link href="/fonts/optimized-fonts/Montserrat-ExtraBold-optimized.woff2" 
         rel="preload" 
         as="font" 
         crossorigin>
-    <link href="/fonts/montserrat/Montserrat-Bold.otf" 
+    <link href="/fonts/optimized-fonts/Montserrat-Bold-optimized.woff2" 
     rel="preload" 
     as="font" 
     crossorigin>
@@ -112,22 +112,37 @@
     </noscript>
     <style>
         @font-face {
-            font-display: optional;
-            font-family: "Montserrat-ExtraBold";
-            src: url("/fonts/montserrat/Montserrat-ExtraBold.otf") 
-                format("opentype");
+            font-display: swap;
+            font-family: "Montserrat-ExtraBold-optimized";
+            src: url("/fonts/optimized-fonts/Montserrat-ExtraBold-optimized.woff2") 
+                format("woff2");
         }
         @font-face {
-            font-display: optional;
+            font-display: swap;
+            font-family: "Montserrat-Bold-optimized";
+            src: url("/fonts/optimized-fonts/Montserrat-Bold-optimized.woff2") 
+                format("woff2");
+        }
+        @font-face {
+            font-display: swap;
+            font-family: "Montserrat-ExtraBold";
+            src: url("/fonts/optimized-fonts/Montserrat-ExtraBold.woff2") 
+                format("woff2");
+        }
+        @font-face {
+            font-display: swap;
             font-family: "Montserrat-Bold";
-            src: url("/fonts/montserrat/Montserrat-Bold.otf") format("opentype");
+            src: url("/fonts/optimized-fonts/Montserrat-Bold.woff2") 
+                format("woff2");
         }
         :root {
             --red-accent: #eb1111;
             --section-top-bottom-margin: 170px;
+            --bold: 'Montserrat-ExtraBold-optimized', 'Montserrat-ExtraBold', Verdana;
+            --regular: 'Montserrat-Bold-optimized', 'Montserrat-Bold', Verdana;
         }
         .bold {
-            font-family: 'Montserrat-ExtraBold', Roboto, Verdana;
+            font-family: var(--bold);
         }
         a {
             color: inherit;
@@ -155,7 +170,7 @@
             background-color: #5FE3D8;
             border: none;
             border-radius: var(--common-border-radius);
-            font-family: 'Montserrat-Bold', Roboto, Verdana;
+            font-family: var(--bold);
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
