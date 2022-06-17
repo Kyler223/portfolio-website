@@ -44,64 +44,48 @@
         sizes="16x16">
     <link href="/favicon/site.webmanifest" 
         rel="manifest">
+    <!-- stylesheets -->
+    <link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
+    <link rel="preload" href="/styles-actions.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles-actions.css"></noscript>
     <!-- javascript -->
-    <script>
-        //after window loads
-        window.addEventListener("load", function(){
-            var stylesheets = ['/styles.css', '/styles-actions.css'];
-            for (var i = 0; i < stylesheets.length; i++) {
-                var element = document.createElement("link");
-                element.href = stylesheets[i];
-                element.rel = 'stylesheet';
-                element.type = "text/css";
-                document.body.appendChild(element);
-            }
-            var scriptSrcs = [
-                "hamburgerClick.js", 
-                "reveal.js", 
-                "lazy-load.js",
-                "iframe-scroller.js"];
-            for (var i = 0; i < scriptSrcs.length; i++) {
-                var element = document.createElement("script");
-                element.src = scriptSrcs[i];
-                element.type = "text/javascript";
-                document.body.appendChild(element);
-            }
-            var intersectionScripts = [
-                "page-speed-insights.js",
-                "contact-script.js"];
-            var intersectionObjects = [
-                document.getElementById("website-test-section"),
-                document.getElementById("contact-me")];
+    <script src="hamburgerClick.js" type="text/javascript" defer></script>
+    <script src="reveal.js" type="text/javascript" defer></script>
+    <script src="iframe-scroller.js" type="text/javascript" defer></script>
+    <script defer>
+        var intersectionScripts = [
+            "page-speed-insights.js",
+            "contact-script.js"];
+        var intersectionObjects = [
+            document.getElementById("website-test-section"),
+            document.getElementById("contact-me")];
 
-            const load = target => {
-                const io = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
+        const load = target => {
+            const io = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
 
-                    if (entry.isIntersecting) {
-                        const obj = entry.target;
-                        var element = document.createElement("script");
-                        element.type = "text/javascript";
+                if (entry.isIntersecting) {
+                    const obj = entry.target;
+                    var element = document.createElement("script");
+                    element.type = "text/javascript";
 
-                        if(obj === document.getElementById("website-test-section")) {
-                            element.src = "page-speed-insights.js";
-                        }
-                        if(obj === document.getElementById("contact-me")) {
-                            element.src = "contact-script.js";
-                        }
-
-                        console.log(`Loaded: ${element.src}`);
-                        document.body.appendChild(element);
-                        observer.disconnect();
+                    if(obj === document.getElementById("website-test-section")) {
+                        element.src = "page-speed-insights.js";
                     }
-                    });
+                    if(obj === document.getElementById("contact-me")) {
+                        element.src = "contact-script.js";
+                    }
+
+                    console.log(`Loaded: ${element.src}`);
+                    document.body.appendChild(element);
+                    observer.disconnect();
+                }
                 });
-
-                io.observe(target);
-            };
-
-            intersectionObjects.forEach(load);
-        });
+            });
+            io.observe(target);
+        };
+        intersectionObjects.forEach(load);
     </script>
     <noscript>
         <style>
@@ -459,7 +443,7 @@
             <a target="_blank" href="https://www.thinkwithgoogle.com/_qs/documents/3975/c676a_Google_MobileSiteSpeed_Playbook_v2.1_digital_RD1XArd.pdf">
                 <div class="percent-quote">
                     <h3>"53%</h3>
-                    <img lazy="/images/red-down-arrow.svg"
+                    <img src="/images/red-down-arrow.svg"
                         width="20px" height="20px" 
                         alt="red down arrow"/>
                     <p>of people will leave a mobile site if it takes more than three seconds to load" - Google</p>
@@ -467,7 +451,7 @@
                 <div class="percent-quote">
                     <p>“mobile pages that loaded one second faster saw up to </p>
                     <h3>27%</h3>
-                    <img lazy="/images/green-up-arrow.svg"
+                    <img src="/images/green-up-arrow.svg"
                         width="20px" height="20px" 
                         alt="green up arrow"/>
                     <p> increase in conversion rates" - Google</p>
@@ -637,31 +621,31 @@
                             Caroline I.
                         </h3>
                         <div class="flex-break"></div>
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
@@ -686,31 +670,31 @@
                             Abigail H.
                         </h3>
                         <div class="flex-break"></div>
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
                             loading="lazy"
                         />
-                        <img lazy="/images/star.svg" 
+                        <img src="/images/star.svg" 
                             alt="Star Icon" 
                             class="star" 
                             width="16px" height="16px" 
@@ -747,13 +731,13 @@
                             class="h3-certification">
                             HTML
                         </h3>
-                        <img lazy="images/html.webp"
+                        <img src="images/html.webp"
                              title="Click here for the real HTML certificate" 
                              width="20.4%" height="15.504%" 
                              loading="lazy" 
                              alt="Learn HTML certificate" 
                              class="img-certification"
-                             srcset-lazy="images/html-small.webp 250w"
+                             srcset="images/html-small.webp 250w"
                              />
                     </div>
                 </a>
@@ -764,13 +748,13 @@
                             class="h3-certification">
                             CSS
                         </h3>
-                        <img lazy="images/css.webp"
+                        <img src="images/css.webp"
                              title="Click here for the real CSS certificate" 
                              width="20.4%" height="15.504%" 
                              loading="lazy" 
                              alt="Learn CSS certificate" 
                              class="img-certification"
-                             srcset-lazy="images/css-small.webp 250w"
+                             srcset="images/css-small.webp 250w"
                              />
                     </div>
                 </a>
@@ -779,13 +763,13 @@
                     <div>
                         <h3 title="Click here for the real Javascript certificate" 
                             class="h3-certification">Javascript</h3>
-                        <img lazy="images/javascript.webp"
+                        <img src="images/javascript.webp"
                              title="Click here for the real Javascript certificate" 
                              width="20.4%" height="15.504%" 
                              loading="lazy" 
                              alt="Learn Javascript certificate" 
                              class="img-certification" 
-                             srcset-lazy="images/javascript-small.webp 250w"
+                             srcset="images/javascript-small.webp 250w"
                              />
                     </div>
                 </a>
@@ -796,12 +780,12 @@
                             class="h3-certification">
                             React
                         </h3>
-                        <img lazy="images/react.webp" 
+                        <img src="images/react.webp" 
                              title="Click here for the real React certificate" 
                              width="20.4%" width="15.504%" 
                              loading="lazy" alt="Learn React certificate" 
                              class="img-certification"
-                             srcset-lazy="images/react-small.webp 250w"
+                             srcset="images/react-small.webp 250w"
                              />
                     </div>
                 </a>
@@ -815,12 +799,12 @@
                     About Me
                 </h2>
                 <div class="img-text-container">
-                    <img lazy="/images/pfp.webp" 
+                    <img src="/images/pfp.webp" 
                          class="pic-about-me" 
                          width="30%" 
                          loading="lazy" 
                          alt="Picture of Kyler Nelson"
-                         srcset-lazy="/images/pfp-medium.webp 1056w,
+                         srcset="/images/pfp-medium.webp 1056w,
                             /images/pfp-small.webp 704w,
                             /images/pfp-smaller.webp 528w,"
                     />
@@ -879,12 +863,12 @@
                         It's so much fun to get rid of the clutter that a lot of websites have and make them load within seconds.
                     </p>
                 </div>
-                <img lazy="/images/code.webp" 
+                <img src="/images/code.webp" 
                      class="pic-about-me" 
                      width="30%" 
                      loading="lazy" 
                      alt="Screenshot of JavaScript" 
-                     srcset-lazy="/images/code-medium.webp 600w,
+                     srcset="/images/code-medium.webp 600w,
                         /images/code-small.webp 400w"
                 />
             </div>
@@ -925,7 +909,7 @@
                     />
                     <button type="submit" class="submit-form-button" id="send">
                         Send
-                        <img lazy="/images/paper-plane-top.svg" 
+                        <img src="/images/paper-plane-top.svg" 
                              id="send-icon" 
                              alt="Send Icon" 
                              loading="lazy"
@@ -943,7 +927,7 @@
             </h2>
             <a href="https://github.com/Kyler223" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img lazy="/images/github-square.svg" 
+                    <img src="/images/github-square.svg" 
                          alt="Github Icon" 
                          class="icon" 
                          width="22px" height="22px" 
@@ -956,7 +940,7 @@
             </a>
             <a href="https://medium.com/@KylerNelson" target="_blank">
                 <div class="footer-icon-text-div">
-                    <img lazy="/images/medium.svg" 
+                    <img src="/images/medium.svg" 
                          alt="Medium Icon" 
                          class="icon" 
                          width="22px" height="22px" loading="lazy"
