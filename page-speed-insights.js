@@ -4,11 +4,6 @@ const urlTestInput = document.getElementById('url-test-input');
 const form = document.getElementById("PageSpeed-API-Form");
 const label = document.getElementById('testing-page-label');
 
-//loading bar
-const loadingBar = document.getElementById("greenBar");
-let stepValue = 0;
-let id = '';
-
 //stop form from reloading on submit
 form.addEventListener('submit', formSubmit);
 function formSubmit(event) {
@@ -68,13 +63,9 @@ function runWebsiteTest() {
     fetch(url)
         .then(response => response.json())
         .then(json => {
-            
-        loadingBar.style.width = `100%`;
 
         if(json.id) {
             //done loading
-            stepValue = 100;
-            clearInterval(id); 
             console.log(json);
     
             pageTested.textContent = `Page tested: ${json.id}`;
@@ -95,8 +86,6 @@ function runWebsiteTest() {
             document.documentElement.style.setProperty('--loading-bar-and-label-opacity', 0);
         }
         else {
-            stepValue = 100;
-            clearInterval(id);
             label.textContent = `ERROR could not reach: ${UsersURL}`;
             document.documentElement.style.setProperty('--green-bar-color', '#FF0D00');
         }
@@ -120,28 +109,6 @@ function setUpQuery(url) {
 
 function loading(url) {
     label.textContent = `Testing Page: ${url}`;
-    stepValue = 5;
-    id = setInterval(frame, 1200);
-  
-    function frame() {
-      if (stepValue >= 100) {
-        clearInterval(id);
-      }
-      else {
-        var random = Math.random() * (5 - 2.5) + 2.5;
-        if(stepValue >= 70){
-            random = Math.random() * (1.25 - .5) + .5;
-        }
-        if(stepValue >= 85){
-            random = Math.random() * (0.625 - .25) + .25;
-        }
-        if(stepValue >= 95){
-            random = Math.random() * (0.3125 - .125) + .125;
-        }
-        loadingBar.style.width = `${stepValue + random}%`;
-        stepValue = stepValue + random;
-      }
-    }
 }
 
 function color(score) {

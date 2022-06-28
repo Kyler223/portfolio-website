@@ -130,32 +130,66 @@
 
 #testing-page-label {
     font-size: 1.25rem;
+    margin: 0;
 }
 
-/* progress bar */
-#progressbarWrapper {
-    display: var(--metrics-display);
-    height: 12px;
-    width: 100%;
-    top: 65%;
-    background: var(--grey);
-    box-shadow: 0 0px 14px rgba(0, 0, 0, 0.5);
-    border-radius: 6px;
-}
-
-#greenBar {
-    display: var(--metrics-display);
-    height: 100%;
-    width: 5px;
-    background-color: var(--green-bar-color);
+/* loading spinner */
+.lds-ellipsis {
+    display: inline-block;
     position: relative;
-    overflow: hidden;
-    font-size: 15px;
-    text-align: center;
-    color: white;
-    transition: all 700ms ease;
-    border-radius: 5px;
-}
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #00b1d8;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
 
 .ring {
     display: var(--metrics-display);
@@ -441,17 +475,13 @@ h2 {
 }
 
 /* about-me-styles */
-.about-me-container {
-    margin: var(--section-top-bottom-margin) auto;
-}
-
 .img-text-container {
     width: var(--common-width);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    margin: 80px auto;
+    margin: 70px auto;
 }
 
 /* phones */

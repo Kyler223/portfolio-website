@@ -27,9 +27,9 @@
         as="font" 
         crossorigin>
     <link href="/fonts/optimized-fonts/Montserrat-Bold-optimized.woff2" 
-    rel="preload" 
-    as="font" 
-    crossorigin>
+        rel="preload" 
+        as="font" 
+        crossorigin>
     <!-- favicons -->
     <link href="/favicon/apple-touch-icon.png" 
         rel="apple-touch-icon" 
@@ -50,13 +50,11 @@
     <link rel="preload" href="/styles-actions.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/styles-actions.css"></noscript>
     <!-- javascript -->
-    <script src="hamburgerClick.js" type="text/javascript" defer></script>
-    <script src="reveal.js" type="text/javascript" defer></script>
-    <script src="iframe-scroller.js" type="text/javascript" defer></script>
+    <script defer src="hamburgerClick.js" type="text/javascript"></script>
+    <script defer src="reveal.js" type="text/javascript"></script>
+    <script defer src="iframe-scroller.js" type="text/javascript"></script>
     <script defer>
-        var intersectionScripts = [
-            "page-speed-insights.js",
-            "contact-script.js"];
+    window.addEventListener('load', (event) => {
         var intersectionObjects = [
             document.getElementById("website-test-section"),
             document.getElementById("contact-me")];
@@ -86,6 +84,7 @@
             io.observe(target);
         };
         intersectionObjects.forEach(load);
+    });
     </script>
     <noscript>
         <style>
@@ -368,7 +367,7 @@
                         Packages
                     </li>
                 </a>
-                <a href="#about-me" title="About Me">
+                <a href="/about-me/index.html" title="About Me">
                     <li class="nav-item">
                         About Me
                     </li>
@@ -485,9 +484,7 @@
             <div class="metrics-container">
                 <div class="loading-bar-and-label">
                     <p id="testing-page-label"></p>
-                    <div id="progressbarWrapper">
-                        <span id="greenBar"></span>
-                    </div>
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                 </div>
                 <div class="ring">
                     <div class="ring ring-grey"></div>
@@ -604,273 +601,114 @@
                 </div>
             </div> -->
         </section>
-                <!-- testimonials -->
-                <section class="reveal testimonials"
-                style="margin: 180px auto;">
-                <a href="https://www.upwork.com/freelancers/~015c7a36cfed71b897" 
-                    target="_blank">
-                    <h2 title="Click here to see see my Upwork profile" 
-                        class="second-header bold">
-                        Testimonials
-                    </h2>
-                    <div class="line-break"></div>
-                </a>
-                <div class="testimonials-container">
-                    <div class="testimonials-div">
-                        <h3 class="bold name-testimonial">
-                            Caroline I.
-                        </h3>
-                        <div class="flex-break"></div>
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <h3 class="stars-header bold">
-                            5 Stars
-                        </h3>
-                        <div class="flex-break"></div>
-                        <p class="testimonials-content">
-                            "Kyler is very skilled and it is super easy to communicate with him. 
-                            He understands right away what you need and does it perfectly. 
-                            I will definitely hire him again when needed."
-                        </p>
-                        <div class="flex-break"></div>
-                        <p class="testimonials-date">
-                            Mar 29, 2022
-                        </p>
-                    </div>
-                    <div class="testimonials-div">
-                        <h3 class="bold name-testimonial">
-                            Abigail H.
-                        </h3>
-                        <div class="flex-break"></div>
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <img src="/images/star.svg" 
-                            alt="Star Icon" 
-                            class="star" 
-                            width="16px" height="16px" 
-                            loading="lazy"
-                        />
-                        <h3 class="stars-header bold">5 Stars</h3>
-                        <div class="flex-break"></div>
-                        <p class="testimonials-content">
-                            "[He] was quick, responsive, polite, and did a great job. 
-                            I peppered him with details beyond the original scope of the work, and he took every suggestion and made it happen. 
-                            I will definitely use him again."
-                        </p>
-                        <div class="flex-break"></div>
-                        <p class="testimonials-date">
-                            Apr 5, 2022
-                        </p>
-                    </div>
-                </div>
-            </section>
-        <!-- certifications -->
-        <section class="certificationsDiv-container reveal">
-            <a href="https://www.codecademy.com/profiles/kylernelson" target="_blank">
-                <h2 title="Click here to see all my Codecademy certificates" 
+        <!-- testimonials -->
+        <section class="reveal testimonials"
+            style="margin: 180px auto;">
+            <a href="https://www.upwork.com/freelancers/~015c7a36cfed71b897" 
+                target="_blank">
+                <h2 title="Click here to see see my Upwork profile" 
                     class="second-header bold">
-                    My Certificates
+                    Testimonials
                 </h2>
                 <div class="line-break"></div>
             </a>
-            <div class="certificationsDiv" style="display: flex;">
-                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
-                    target="_blank">
-                    <div>
-                        <h3 title="Click here for the real HTML certificate" 
-                            class="h3-certification">
-                            HTML
-                        </h3>
-                        <img src="images/html.webp"
-                             title="Click here for the real HTML certificate" 
-                             width="20.4%" height="15.504%" 
-                             loading="lazy" 
-                             alt="Learn HTML certificate" 
-                             class="img-certification"
-                             srcset="images/html-small.webp 250w"
-                             />
-                    </div>
-                </a>
-                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" 
-                    target="_blank">
-                    <div>
-                        <h3 title="Click here for the real CSS certificate" 
-                            class="h3-certification">
-                            CSS
-                        </h3>
-                        <img src="images/css.webp"
-                             title="Click here for the real CSS certificate" 
-                             width="20.4%" height="15.504%" 
-                             loading="lazy" 
-                             alt="Learn CSS certificate" 
-                             class="img-certification"
-                             srcset="images/css-small.webp 250w"
-                             />
-                    </div>
-                </a>
-                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e" 
-                    target="_blank">
-                    <div>
-                        <h3 title="Click here for the real Javascript certificate" 
-                            class="h3-certification">Javascript</h3>
-                        <img src="images/javascript.webp"
-                             title="Click here for the real Javascript certificate" 
-                             width="20.4%" height="15.504%" 
-                             loading="lazy" 
-                             alt="Learn Javascript certificate" 
-                             class="img-certification" 
-                             srcset="images/javascript-small.webp 250w"
-                             />
-                    </div>
-                </a>
-                <a href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b"
-                    target="_blank">
-                    <div>
-                        <h3 title="Click here for the real React certificate" 
-                            class="h3-certification">
-                            React
-                        </h3>
-                        <img src="images/react.webp" 
-                             title="Click here for the real React certificate" 
-                             width="20.4%" width="15.504%" 
-                             loading="lazy" alt="Learn React certificate" 
-                             class="img-certification"
-                             srcset="images/react-small.webp 250w"
-                             />
-                    </div>
-                </a>
-            </div>
-        </section>
-        <!-- about me -->
-        <section class="about-me-container"
-            style="margin: 180px auto;">
-            <div class="reveal" id="about-me">
-                <h2 class="second-header bold">
-                    About Me
-                </h2>
-                <div class="img-text-container">
-                    <img src="/images/pfp.webp" 
-                         class="pic-about-me" 
-                         width="30%" 
-                         loading="lazy" 
-                         alt="Picture of Kyler Nelson"
-                         srcset="/images/pfp-medium.webp 1056w,
-                            /images/pfp-small.webp 704w,
-                            /images/pfp-smaller.webp 528w,"
-                    />
-                    <div class="bio">
-                        <h3 class="bio-text bold">
-                            Intro To Programming
-                        </h3>
-                        <p>
-                            My name is Kyler Nelson. I first started to code 5+ years ago. 
-                            I was making apps on Android Studio when I was 16 years old. 
-                            I loved the process of writing code and problem solving. 
-                            That was an amazing feeling, which has never faded over the years of my coding career.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="img-text-container reveal">
-                <div class="bio">
-                    <h3 class="bio-text bold">
-                        Web Development
+            <div class="testimonials-container">
+                <div class="testimonials-div">
+                    <h3 class="bold name-testimonial">
+                        Caroline I.
                     </h3>
-                    <p>
-                        I've learned front-end web development from online courses on Codecademy. 
-                        I currently have 
-                        <a href="https://www.codecademy.com/profiles/kylernelson" 
-                            class="a" 
-                            target="_blank" 
-                            title="Link to my Codecademy profile page">
-                            4 certificates
-                        </a> 
-                        from learning 
-                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7"
-                            class="a" 
-                            target="_blank" 
-                            title="Link to Codecademy HTML certificate">
-                            HTML</a>, 
-                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" 
-                            class="a" 
-                            target="_blank" 
-                            title="Link to Codecademy CSS certificate">
-                            CSS</a>, 
-                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/705dcb15de0da4dd9d9fc4f3274b430e" 
-                            class="a" 
-                            target="_blank" 
-                            title="Link to Codecademy JavaScript certificate">
-                            JavaScript</a>, and 
-                        <a href="https://www.codecademy.com/profiles/kylernelson/certificates/af00e5032d0a68cc84879983f5d8333b" 
-                            class="a" 
-                            target="_blank" 
-                            title="Link to Codecademy React certificate">
-                            React</a>.
+                    <div class="flex-break"></div>
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <h3 class="stars-header bold">
+                        5 Stars
+                    </h3>
+                    <div class="flex-break"></div>
+                    <p class="testimonials-content">
+                        "Kyler is very skilled and it is super easy to communicate with him. 
+                        He understands right away what you need and does it perfectly. 
+                        I will definitely hire him again when needed."
                     </p>
-                    <p>
-                        While making sample websites for my portfolio to get a job in web development. 
-                        I found out I have a love to speed up websites. 
-                        It's so much fun to get rid of the clutter that a lot of websites have and make them load within seconds.
+                    <div class="flex-break"></div>
+                    <p class="testimonials-date">
+                        Mar 29, 2022
                     </p>
                 </div>
-                <img src="/images/code.webp" 
-                     class="pic-about-me" 
-                     width="30%" 
-                     loading="lazy" 
-                     alt="Screenshot of JavaScript" 
-                     srcset="/images/code-medium.webp 600w,
-                        /images/code-small.webp 400w"
-                />
+                <div class="testimonials-div">
+                    <h3 class="bold name-testimonial">
+                        Abigail H.
+                    </h3>
+                    <div class="flex-break"></div>
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <img src="/images/star.svg" 
+                        alt="Star Icon" 
+                        class="star" 
+                        width="16px" height="16px" 
+                        loading="lazy"
+                    />
+                    <h3 class="stars-header bold">5 Stars</h3>
+                    <div class="flex-break"></div>
+                    <p class="testimonials-content">
+                        "[He] was quick, responsive, polite, and did a great job. 
+                        I peppered him with details beyond the original scope of the work, and he took every suggestion and made it happen. 
+                        I will definitely use him again."
+                    </p>
+                    <div class="flex-break"></div>
+                    <p class="testimonials-date">
+                        Apr 5, 2022
+                    </p>
+                </div>
             </div>
         </section>
         <!-- contact me -->
@@ -935,18 +773,6 @@
                     />
                     <p class="footer-p">
                         Github
-                    </p>
-                </div>
-            </a>
-            <a href="https://medium.com/@KylerNelson" target="_blank">
-                <div class="footer-icon-text-div">
-                    <img src="/images/medium.svg" 
-                         alt="Medium Icon" 
-                         class="icon" 
-                         width="22px" height="22px" loading="lazy"
-                    />
-                    <p class="footer-p">
-                        Medium
                     </p>
                 </div>
             </a>
